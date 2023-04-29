@@ -1,28 +1,58 @@
 // Project Data
+let posterSizeWidth = 420;
+let posterSizeHeight = 595;
+let albumSizeWidth = 400;
+let albumSizeHeight = 400;
+let wideScreenWidth = 554;
+let wideScreenHeight = 373;
+
+
 const altGal = {
     'id' : 'project-altgal',
+    'title' : '&lt;간결한 생각들 : 생태 - 젠더 - 공산&gt;',
     'img_source' : [{
         'imgIndex' : 1,
         'src' : 'src/img/project_source/altgal_1.png',
-        'width' : '420px',
-        'height' : '595px'
+        'width' : `${posterSizeWidth}px`,
+        'height' : `${posterSizeHeight}px`
     },{
         'imgIndex' : 2,
         'src' : 'src/img/project_source/altgal_2.jpeg',
-        'width' : '554px',
-        'height' : '373px'
+        'width' : `${wideScreenWidth}px`,
+        'height' : `${wideScreenHeight}px`
     },{
         'imgIndex' : 3,
         'src' : 'src/img/project_source/altgal_3.jpeg',
-        'width' : '420px',
-        'height' : '595px'
+        'width' : `${posterSizeWidth}px`,
+        'height' : `${posterSizeHeight}px`
     }],
     'index' : '1 Track (Ambient)',
     'description' : '대안공간루프 (AltGalLoop)에서 진행했던 <간결한 생각들 : 생태 - 젠더 - 공산> 전시의 음악으로 참여했습니다. <br>전시는 앞으로의 세계에 대한 여러 음악가들의 의견을 담은 작품들을 컬렉팅한 후, 시민들이 그 음악들을 들으며 갤러리 근방을 돌아다니며 감상하는 과정을 통해 전시의 일부로 참여하게끔 진행하였습니다. <br>저는 앰비언트 트랙 <침잠을 위한 시퀀스 (Sequence for Sinking)>으로 전시에 참여하여, 혼란스러운 세계에서 단단한 논리를 가지고 나아가자는 메세지를 전하고자 했습니다.'
 }
 
+const umm1 = {
+    'id' : 'project-umm',
+    'title' : 'Umm Vol.1 (꽃내음 Vol.1)',
+    'img_source' : [{
+        'imgIndex' : 1,
+        'src' : 'src/img/project_source/umm_1.png',
+        'width' : `${albumSizeWidth}px`,
+        'height' : `${albumSizeHeight}px`
+    },{
+        'imgIndex' : 2,
+        'src' : 'src/img/project_source/umm_2.png',
+        'width' : `${albumSizeWidth}px`,
+        'height' : `${albumSizeHeight}px`
+    }],
+    'index' : 'Mixset, Cover Design',
+    'description' : '한해의 봄을 맞이하여 제가 느끼는 봄을 떠올리며 고른 곡들을 모아둔 믹스셋입니다. '
+}
 
-const projectList = [altGal]
+
+const projectList = [altGal, umm1]
+
+
+
 // DOM Selectors
 
 const chatbotCursor = document.getElementById('chatbot-cursor');
@@ -63,6 +93,7 @@ const projectDescInfoWrapper = document.getElementById('project-desc-info-wrappe
 
 const projectDescription = document.getElementById('project-description')
 const projectIndex = document.getElementById('project-index');
+const projectTitle = document.getElementById('project-desc-title');
 
 
 const projectDescMediaWrapper = document.getElementById('project-desc-media-wrapper');
@@ -76,7 +107,7 @@ function resumeContentsInit(){
     const contentsWrapperBox = resumeContentsWrapper.getBoundingClientRect()
 
     const cw = contentsWrapperBox.width
-    const ch = 800
+    const ch = contentsWrapperBox.height
     
     
     
@@ -206,12 +237,6 @@ window.addEventListener('mousemove', (e)=>{
     cursor.style.left = `${e.pageX}px`
 })
 
-window.addEventListener('click', ()=>{
-    // cursor.style.animation = 'bigAndSmall 0.5s cubic-bezier(0,.77,.5,.99)'
-})
-window.addEventListener('animationend', ()=>{
-    cursor.style.animation = 'none'
-})
 
 // PART 2. RESUME & INTRODUCTION
 
@@ -305,33 +330,39 @@ function initProject(index){
     }
 }
 
+function appendImg(project, index){
+    console.log('called!')
+    const img = document.createElement('img');
+    img.setAttribute('src', project.img_source[index].src)
+    img.style.width = project.img_source[index].width
+    img.style.height = project.img_source[index].height
+
+    projectDescMediaWrapper.append(img)
+}
+
 function showProject(id){
-    if(projectList[0].id == id){
-        const img1 = document.createElement('img');
-        const img2 = document.createElement('img');
-        const img3 = document.createElement('img');
+    console.log(id)
+    for(let i = 0; i < projectList.length; i++){
 
-        img1.classList.add('project-img');
-        img1.setAttribute('src', projectList[0].img_source[0].src);
-        img1.style.width = projectList[0].img_source[0].width
-        img1.style.height = projectList[0].img_source[0].height
 
-        img2.classList.add('project-img');
-        img2.setAttribute('src', projectList[0].img_source[1].src);
-        img2.style.width = projectList[0].img_source[1].width
-        img2.style.height = projectList[0].img_source[1].height
-
-        img3.classList.add('project-img');
-        img3.setAttribute('src', projectList[0].img_source[2].src);
-        img3.style.width = projectList[0].img_source[2].width
-        img3.style.height = projectList[0].img_source[2].height
-
-        projectDescription.innerHTML = projectList[0].description
-        projectIndex.innerHTML = projectList[0].index
-
-        projectDescMediaWrapper.append(img1, img2, img3)
-
+        if(projectList[i].id == id){
+            // 프로젝트 이전 정보 초기화
+            projectDescMediaWrapper.innerHTML = '';
+            projectDescription.innerHTML = '';
+            projectIndex.innerHTML = '';
+            projectTitle.innerHTML = ''
+            console.log('matched!')
+            for(let j = 0; j < projectList[i].img_source.length; j++){
+                appendImg(projectList[i], j);
+            }
+    
+            projectDescription.innerHTML = projectList[i].description
+            projectIndex.innerHTML = projectList[i].index
+            projectTitle.innerHTML = projectList[i].title
+    
+        }
     }
+    
 }
 
 projects.forEach((dom, index) => {

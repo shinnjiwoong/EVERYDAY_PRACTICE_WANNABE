@@ -511,7 +511,7 @@ font-style: normal; */
   height: 100%;
   font-family: var(--main-font);
   font-size: var(--font-semi-medium);
-  font-weight: 400;
+  font-weight: 100;
   color: var(--port-contents-color);
   padding: 0px 10px;
 }
@@ -723,7 +723,7 @@ font-style: normal; */
   transform: rotate(45deg) !important;
 }
 .project-img{
-  margin-left: 10px;
+  padding: 10px;
 }
 
 #project-desc-title{
