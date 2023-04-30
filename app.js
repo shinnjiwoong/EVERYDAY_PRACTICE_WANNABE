@@ -5,6 +5,10 @@ let albumSizeWidth = 400;
 let albumSizeHeight = 400;
 let wideScreenWidth = 554;
 let wideScreenHeight = 373;
+let videoWidth = 854;
+let videoHeight = 480;
+let logoSquareWidth = 600;
+let logoSquareHeight = 600;
 
 
 const altGal = {
@@ -12,22 +16,66 @@ const altGal = {
     'title' : '&lt;간결한 생각들 : 생태 - 젠더 - 공산&gt;',
     'img_source' : [{
         'imgIndex' : 1,
-        'src' : 'src/img/project_source/altgal_1.png',
+        'src' : 'src/img/project_source/altgal_3.jpeg',
         'width' : `${posterSizeWidth}px`,
         'height' : `${posterSizeHeight}px`
     },{
         'imgIndex' : 2,
+        'src' : 'src/img/project_source/altgal_1.png',
+        'width' : `${posterSizeWidth}px`,
+        'height' : `${posterSizeHeight}px`
+    },{
+        'imgIndex' : 3,
         'src' : 'src/img/project_source/altgal_2.jpeg',
         'width' : `${wideScreenWidth}px`,
         'height' : `${wideScreenHeight}px`
-    },{
-        'imgIndex' : 3,
-        'src' : 'src/img/project_source/altgal_3.jpeg',
-        'width' : `${posterSizeWidth}px`,
-        'height' : `${posterSizeHeight}px`
     }],
-    'index' : '1 Track (Ambient)',
+    'video' : null,
+    'index' : '1 Song (Ambient), 2021',
     'description' : '대안공간루프 (AltGalLoop)에서 진행했던 <간결한 생각들 : 생태 - 젠더 - 공산> 전시의 음악으로 참여했습니다. <br>전시는 앞으로의 세계에 대한 여러 음악가들의 의견을 담은 작품들을 컬렉팅한 후, 시민들이 그 음악들을 들으며 갤러리 근방을 돌아다니며 감상하는 과정을 통해 전시의 일부로 참여하게끔 진행하였습니다. <br>저는 앰비언트 트랙 <침잠을 위한 시퀀스 (Sequence for Sinking)>으로 전시에 참여하여, 혼란스러운 세계에서 단단한 논리를 가지고 나아가자는 메세지를 전하고자 했습니다.'
+}
+const underfoot = {
+    'id' : 'project-underfoot',
+    'title' : 'UNDERFOOT 웹사이트',
+    'img_source' : [{
+        'imgIndex' : 1,
+        'src' : 'src/img/project_source/UNDERFOOT_1.png',
+        'width' : `${logoSquareWidth}px`,
+        'height' : `${logoSquareHeight}px`
+    }],
+    'video' : {
+        'src' : 'src/project_vid/UNDERFOOT__REC.mp4',
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
+    },
+    'index' : 'Website Development, Logo Design, 2023',
+    'description' : '서울을 기반으로 하는 아티스트 콜렉티브 UNDERFOOT의 웹사이트를 기획, 디자인 및 개발하였습니다. '
+}
+
+const casper = {
+    'id' : 'project-casper',
+    'title' : "HYUNDAI CASPER x Kasina",
+    'img_source' : null,
+    'video' : {
+        'src' : 'src/project_vid/CASPER.mp4',
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
+    },
+    'index' : '1 Song, 2022',
+    'description' : '현대자동차의 캐스퍼와 카시나의 협업 이벤트의 공식 광고 음악을 작업했습니다.'
+}
+
+const shia = {
+    'id' : 'project-shia',
+    'title' : "샤이아를 화나게 하지 말라 (Don't Piss Shia Off)",
+    'img_source' : null,
+    'video' : {
+        'src' : 'src/project_vid/DPSO.mp4',
+        'width' : `${logoSquareWidth}px`,
+        'height' : `${logoSquareHeight}px`
+    },
+    'index' : 'Website Development, 2023',
+    'description' : ''
 }
 
 const umm1 = {
@@ -44,12 +92,30 @@ const umm1 = {
         'width' : `${albumSizeWidth}px`,
         'height' : `${albumSizeHeight}px`
     }],
-    'index' : 'Mixset, Cover Design',
+    'index' : 'Mixset, Cover Design, 2022',
     'description' : '한해의 봄을 맞이하여 제가 느끼는 봄을 떠올리며 고른 곡들을 모아둔 믹스셋입니다. '
 }
 
+const mindcraft = {
+    'id' : 'project-mindcraft',
+    'title' : 'Mindcraft',
+    'img_source' : [{
+        'imgIndex' : 1,
+        'src' : 'src/img/project_source/MINDCRAFT_1.jpeg',
+        'width' : `${albumSizeWidth}px`,
+        'height' : `${albumSizeHeight}px`
+    },{
+        'imgIndex' : 2,
+        'src' : 'src/img/project_source/MINDCRAFT_2.png',
+        'width' : `${wideScreenWidth}px`,
+        'height' : `${wideScreenHeight}px`
+    }],
+    'index' : '6 Songs, 2019',
+    'description' : '저에게 2019년은 꽤나 혼란스러운 시기였습니다. <br>그 가운데에서 저를 좌절에 빠지지 않도록 할 수 있는 6개의 메세지를 담은 곡을 만들어 공개하였습니다.'
+}
 
-const projectList = [altGal, umm1]
+
+const projectList = [altGal, umm1, mindcraft, underfoot, shia, casper]
 
 
 
@@ -74,6 +140,7 @@ const introHeaderSection = document.getElementById('introduction-header-section'
 // const resumeImg = document.getElementById('resume-img')
 const resumeContentsWrapper = document.getElementById('contents-wrapper');
 const resumeCategoryTitle = document.getElementById('resume-title');
+const introductionCategoryTitle = document.getElementById('introduction-title')
 // const resumeDescription = document.getElementById('resume-description');
 // const resumeDescWrapper = document.getElementById('resume-desc-wrapper')
 
@@ -90,7 +157,7 @@ const projectSlidingWrapper = document.getElementById('projects-sliding-wrapper'
 const projectContentsWrapper = document.getElementById('project-desc-contents-wrapper');
 const projectDescDetailBtn = document.getElementById('project-desc-detail-btn');
 const projectDescInfoWrapper = document.getElementById('project-desc-info-wrapper');
-
+const projectFilters = document.querySelectorAll('.project-filter')
 const projectDescription = document.getElementById('project-description')
 const projectIndex = document.getElementById('project-index');
 const projectTitle = document.getElementById('project-desc-title');
@@ -240,6 +307,9 @@ window.addEventListener('mousemove', (e)=>{
 
 // PART 2. RESUME & INTRODUCTION
 
+let resumeSectionColor = 'rgb(175, 223, 166)'
+let introductionSectionColor = 'rgb(204, 153, 204)'
+
 resAndIntroSec.addEventListener('mousemove', (e)=>{
     const pageRect = resAndIntroSec.getBoundingClientRect();
     // console.log(pageRect.width)
@@ -259,14 +329,16 @@ resumeHeaderSection.addEventListener('click', async ()=>{
     sectionsWrapper.classList.remove('section-initial')
     sectionsWrapper.classList.add('section-resume')
     resumeArrow.style.opacity = '1'
-    resumeHeaderSection.style.backgroundColor = 'rgb(0, 204, 0)'
+    resumeHeaderSection.style.backgroundColor = resumeSectionColor
     resumeContentsInit();
 })
 resumeSection.addEventListener('mouseenter', ()=>{
-    resumeHeaderSection.style.backgroundColor = 'rgb(0, 204, 0)'
+    resumeHeaderSection.style.backgroundColor = resumeSectionColor
+    // resumeCategoryTitle.style.color = 'white'
 })
 resumeSection.addEventListener('mouseleave', ()=>{
-    resumeHeaderSection.style.backgroundColor = 'white'
+    resumeHeaderSection.style.backgroundColor = 'rgb(150, 150, 150)'
+    // resumeCategoryTitle.style.color = 'initial'
 })
 resumeArrow.addEventListener('click', async ()=>{
     if(sectionsWrapper.classList.contains('section-resume')){
@@ -277,8 +349,8 @@ resumeArrow.addEventListener('click', async ()=>{
     marker.style.display = 'block'
     // sectionsWrapper.classList.add('section-initial')
     resumeArrow.style.opacity = '0';
-    introHeaderSection.style.backgroundColor = 'white';
-    resumeHeaderSection.style.backgroundColor = 'white'
+    introHeaderSection.style.backgroundColor = 'rgb(150, 150, 150)';
+    resumeHeaderSection.style.backgroundColor = 'rgb(150, 150, 150)'
 })
 introductionSection.addEventListener('click', async ()=>{
     marker.style.display = 'none'
@@ -287,18 +359,20 @@ introductionSection.addEventListener('click', async ()=>{
     sectionsWrapper.classList.remove('section-initial')
     sectionsWrapper.classList.add('section-intro')
     resumeArrow.style.opacity = '1'
-    introHeaderSection.style.backgroundColor = 'rgb(255, 255, 0)';
+    introHeaderSection.style.backgroundColor = introductionSectionColor;
 })
 introductionSection.addEventListener('mouseenter', ()=>{
-    introHeaderSection.style.backgroundColor = 'rgb(255, 255, 0)'
+    introHeaderSection.style.backgroundColor = introductionSectionColor
+    // introductionCategoryTitle.style.color = 'white'
 })
 introductionSection.addEventListener('mouseleave', ()=>{
-    introHeaderSection.style.backgroundColor = 'white'
+    introHeaderSection.style.backgroundColor = 'rgb(150, 150, 150)'
+    // introductionCategoryTitle.style.color = 'initial'
 })
 
 boxes.forEach((e) => {
     e.addEventListener('mouseenter', ()=>{
-        resumeHeaderSection.style.backgroundColor = 'rgb(0, 204, 0)'
+        resumeHeaderSection.style.backgroundColor = resumeSectionColor
         if(e.id == 'box-name'){
             resumeCategoryTitle.innerHTML = '신지웅 <br>Jiwoong Shinn'
         }else if(e.id == 'box-school'){
@@ -313,7 +387,8 @@ boxes.forEach((e) => {
     })
     e.addEventListener('mouseleave', ()=>{
         resumeCategoryTitle.innerHTML = '인적사항 (Personal Info.)'
-        resumeHeaderSection.style.backgroundColor = 'white'
+        resumeHeaderSection.style.backgroundColor = 'rgb(150, 150, 150)'
+        resumeCategoryTitle.style.color = 'initial'
     })
 })
 
@@ -332,10 +407,19 @@ function initProject(index){
 
 function appendImg(project, index){
     console.log('called!')
+
     const img = document.createElement('img');
+
     img.setAttribute('src', project.img_source[index].src)
     img.style.width = project.img_source[index].width
     img.style.height = project.img_source[index].height
+    img.classList.add('project-img')
+
+    img.addEventListener('load', ()=>{
+        setTimeout(()=>{
+            img.style.opacity = '1';
+        }, 200)
+    })
 
     projectDescMediaWrapper.append(img)
 }
@@ -344,7 +428,6 @@ function showProject(id){
     console.log(id)
     for(let i = 0; i < projectList.length; i++){
 
-
         if(projectList[i].id == id){
             // 프로젝트 이전 정보 초기화
             projectDescMediaWrapper.innerHTML = '';
@@ -352,10 +435,33 @@ function showProject(id){
             projectIndex.innerHTML = '';
             projectTitle.innerHTML = ''
             console.log('matched!')
-            for(let j = 0; j < projectList[i].img_source.length; j++){
-                appendImg(projectList[i], j);
+
+            if(projectList[i].video){
+                const videoInfo = projectList[i].video;
+                const videoEl = document.createElement('video');
+
+
+                videoEl.setAttribute('src', videoInfo.src);
+                videoEl.setAttribute('loop', '');
+                videoEl.setAttribute('autoplay', '');
+                videoEl.classList.add('project-video')
+                videoEl.style.width = videoInfo.width;
+                videoEl.style.height = videoInfo.height;
+
+                videoEl.addEventListener('loadedmetadata', ()=>{
+                    setTimeout(()=>{
+                        videoEl.style.opacity = '1';
+                    }, 200)
+                    
+                })
+
+                projectDescMediaWrapper.append(videoEl);
             }
-    
+            if(projectList[i].img_source){
+                for(let j = 0; j < projectList[i].img_source.length; j++){
+                    appendImg(projectList[i], j);
+                }
+            }
             projectDescription.innerHTML = projectList[i].description
             projectIndex.innerHTML = projectList[i].index
             projectTitle.innerHTML = projectList[i].title
@@ -442,7 +548,7 @@ projects.forEach((dom, index) => {
         // dom.style.backgroundColor = 'white'
         dom.style.borderLeft = 'none'
         dom.style.borderRight = 'none'
-        dom.style.borderBottom = 'solid 1px white'
+        dom.style.borderBottom = 'solid 1px black'
         dom.style.borderTop = 'none'
         
         dropSentence.style.opacity = '0';
@@ -459,6 +565,21 @@ projectDescDetailBtn.addEventListener('click', ()=>{
     projectDescDetailBtn.classList.toggle('detailBtnRotate')
 })
 
+projectFilters.forEach(filter => {
+    filter.addEventListener('click', (e)=>{
+        const indexTarget = e.target.id.substr(8);
+
+        projects.forEach(p => {
+            const projectTarget = p.children[0]
+
+            if(projectTarget.classList.contains(indexTarget)){
+                p.classList.remove('project-hide')
+            }else{
+                p.classList.add('project-hide')
+            }
+        })
+    })
+})
 
 // INTRO TYPING
 
@@ -517,7 +638,4 @@ const showDialogue = async (dialogue) => {
 }
 
 showDialogue(chatbotText1)
-
-let bgColors = ['#FEEF8A', '#032CA6', '#04D976', '#E4E9EF', '#F26B6B']
-
 
