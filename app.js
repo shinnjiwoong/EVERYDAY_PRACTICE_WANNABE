@@ -7,8 +7,8 @@ let wideScreenWidth = 554;
 let wideScreenHeight = 373;
 let videoWidth = 854;
 let videoHeight = 480;
-let logoSquareWidth = 600;
-let logoSquareHeight = 600;
+let logoSquareWidth = 500;
+let logoSquareHeight = 500;
 
 
 const altGal = {
@@ -34,6 +34,19 @@ const altGal = {
     'index' : '1 Song (Ambient), 2021',
     'description' : '대안공간루프 (AltGalLoop)에서 진행했던 <간결한 생각들 : 생태 - 젠더 - 공산> 전시의 음악으로 참여했습니다. <br>전시는 앞으로의 세계에 대한 여러 음악가들의 의견을 담은 작품들을 컬렉팅한 후, 시민들이 그 음악들을 들으며 갤러리 근방을 돌아다니며 감상하는 과정을 통해 전시의 일부로 참여하게끔 진행하였습니다. <br>저는 앰비언트 트랙 <침잠을 위한 시퀀스 (Sequence for Sinking)>으로 전시에 참여하여, 혼란스러운 세계에서 단단한 논리를 가지고 나아가자는 메세지를 전하고자 했습니다.'
 }
+const datura = {
+    'id' : 'project-datura',
+    'title' : 'DATURA : testtape',
+    'img_source' : [{
+        'imgIndex' : 1,
+        'src' : 'src/img/project_source/datura_1.jpeg',
+        'width' : `${albumSizeWidth}px`,
+        'height' : `${albumSizeHeight}px`
+    }],
+    'video' : null,
+    'index' : '1 Song (Ambient), 2021',
+    'description' : "DATURA : testtape은 Wolf Kooky의 데뷔 EP입니다. <br>'독말풀'이라는 뜻의 datura라는 단어에서 영감을 받아 전체적인 음악적 분위기를 구현하였습니다. test tape이라는 부제에서 알 수 있듯, 일종의 음악적 장르의 탐구와 실험을 통해 나온 결과물을 모아둔 음반입니다. <br><br>영상 : 17 oz<br>음악 및 엔지니어링 : 신지웅<br>보컬 : Wolf Kooky"
+}
 const underfoot = {
     'id' : 'project-underfoot',
     'title' : 'UNDERFOOT 웹사이트',
@@ -43,37 +56,72 @@ const underfoot = {
         'width' : `${logoSquareWidth}px`,
         'height' : `${logoSquareHeight}px`
     }],
-    'video' : {
-        'src' : 'src/project_vid/UNDERFOOT__REC.mp4',
+    'video' : [{
+        'src' : 'src/project_vid/underfoot_vid_1.mp4',
         'width' : `${videoWidth}px`,
         'height' : `${videoHeight}px`
-    },
+    },{
+        'src' : 'src/project_vid/underfoot_vid_2.mp4',
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
+    },{
+        'src' : 'src/project_vid/underfoot_vid_3.mp4',
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
+    }],
     'index' : 'Website Development, Logo Design, 2023',
-    'description' : '서울을 기반으로 하는 아티스트 콜렉티브 UNDERFOOT의 웹사이트를 기획, 디자인 및 개발하였습니다. '
+    'description' : "UNDERFOOT은 서울을 기반으로 활동하는 예술인 집단입니다. <br>'우리의 발 아래에 있는 -'이란 뜻의 Underfoot은 음지에 존재하는 다양한 문화들을 상징합니다.<br>'발 밑에 존재한다'는 데에서 착안하여 웹사이트와 로고의 디자인을 '하강'이라는 키워드를 중점으로 작업했습니다.<br><br>웹사이트 기획 / 디자인 / 개발 : 신지웅<br>로고 디자인 : 신지웅"
 }
 
 const casper = {
     'id' : 'project-casper',
     'title' : "HYUNDAI CASPER x Kasina",
-    'img_source' : null,
-    'video' : {
+    'img_source' : [{
+        'imgIndex' : 1,
+        'src' : 'src/img/project_source/casper_1.jpeg',
+        'width' : `${wideScreenWidth}px`,
+        'height' : `${wideScreenHeight}px`
+    }],
+    'video' : [{
         'src' : 'src/project_vid/CASPER.mp4',
         'width' : `${videoWidth}px`,
         'height' : `${videoHeight}px`
-    },
+    }],
     'index' : '1 Song, 2022',
-    'description' : '현대자동차의 캐스퍼와 카시나의 협업 이벤트의 공식 광고 음악을 작업했습니다.'
+    'description' : '현대자동차의 캐스퍼와 카시나의 협업 이벤트의 공식 광고 음악을 작업했습니다. <br><br>애니메이션 : Cary Nam<br>음악 : 신지웅<br>제작 총괄 : .WAV'
 }
 
 const shia = {
     'id' : 'project-shia',
     'title' : "샤이아를 화나게 하지 말라 (Don't Piss Shia Off)",
-    'img_source' : null,
-    'video' : {
+    'img_source' : [{
+        'imgIndex' : 1,
+        'src' : 'src/img/project_source/shia_1.png',
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
+    }],
+    'video' : [{
         'src' : 'src/project_vid/DPSO.mp4',
         'width' : `${logoSquareWidth}px`,
         'height' : `${logoSquareHeight}px`
-    },
+    }],
+    'index' : 'Website Development, 2023',
+    'description' : ''
+}
+
+const sjw = {
+    'id' : 'project-shinnjiwoong',
+    'title' : "shinnjiwoong.com (Ver.1)",
+    'img_source' : null,
+    'video' : [{
+        'src' : 'src/project_vid/SJW_vid_1.mp4',
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
+    },{
+        'src' : 'src/project_vid/SJW_vid_2.mp4',
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
+    }],
     'index' : 'Website Development, 2023',
     'description' : ''
 }
@@ -115,7 +163,7 @@ const mindcraft = {
 }
 
 
-const projectList = [altGal, umm1, mindcraft, underfoot, shia, casper]
+const projectList = [altGal, umm1, mindcraft, underfoot, shia, casper, datura, sjw]
 
 
 
@@ -424,6 +472,28 @@ function appendImg(project, index){
     projectDescMediaWrapper.append(img)
 }
 
+function appendVideo(project, index){
+    const videoInfo = project.video[index];
+    const videoEl = document.createElement('video');
+
+
+    videoEl.setAttribute('src', videoInfo.src);
+    videoEl.setAttribute('loop', '');
+    videoEl.setAttribute('autoplay', '');
+    videoEl.classList.add('project-video')
+    videoEl.style.width = videoInfo.width;
+    videoEl.style.height = videoInfo.height;
+
+    videoEl.addEventListener('loadedmetadata', ()=>{
+        setTimeout(()=>{
+            videoEl.style.opacity = '1';
+        }, 200)
+        
+    })
+
+    projectDescMediaWrapper.append(videoEl);
+}
+
 function showProject(id){
     console.log(id)
     for(let i = 0; i < projectList.length; i++){
@@ -434,28 +504,11 @@ function showProject(id){
             projectDescription.innerHTML = '';
             projectIndex.innerHTML = '';
             projectTitle.innerHTML = ''
-            console.log('matched!')
 
             if(projectList[i].video){
-                const videoInfo = projectList[i].video;
-                const videoEl = document.createElement('video');
-
-
-                videoEl.setAttribute('src', videoInfo.src);
-                videoEl.setAttribute('loop', '');
-                videoEl.setAttribute('autoplay', '');
-                videoEl.classList.add('project-video')
-                videoEl.style.width = videoInfo.width;
-                videoEl.style.height = videoInfo.height;
-
-                videoEl.addEventListener('loadedmetadata', ()=>{
-                    setTimeout(()=>{
-                        videoEl.style.opacity = '1';
-                    }, 200)
-                    
-                })
-
-                projectDescMediaWrapper.append(videoEl);
+                for(let j = 0; j < projectList[i].video.length; j++){
+                    appendVideo(projectList[i], j)
+                }
             }
             if(projectList[i].img_source){
                 for(let j = 0; j < projectList[i].img_source.length; j++){
