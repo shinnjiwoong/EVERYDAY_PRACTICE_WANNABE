@@ -5,6 +5,8 @@ let albumSizeWidth = 400;
 let albumSizeHeight = 400;
 let wideScreenWidth = 554;
 let wideScreenHeight = 373;
+let wideScreenWidthWider = 560;
+let wideScreenHeightWider = 450;
 let videoWidth = 854;
 let videoHeight = 480;
 let logoSquareWidth = 500;
@@ -32,20 +34,70 @@ const altGal = {
     }],
     'video' : null,
     'index' : '1 Song (Ambient), 2021',
-    'description' : '대안공간루프 (AltGalLoop)에서 진행했던 <간결한 생각들 : 생태 - 젠더 - 공산> 전시의 음악으로 참여했습니다. <br>전시는 앞으로의 세계에 대한 여러 음악가들의 의견을 담은 작품들을 컬렉팅한 후, 시민들이 그 음악들을 들으며 갤러리 근방을 돌아다니며 감상하는 과정을 통해 전시의 일부로 참여하게끔 진행하였습니다. <br>저는 앰비언트 트랙 <침잠을 위한 시퀀스 (Sequence for Sinking)>으로 전시에 참여하여, 혼란스러운 세계에서 단단한 논리를 가지고 나아가자는 메세지를 전하고자 했습니다.'
+    'description' : '대안공간루프 (AltGalLoop)에서 진행했던 <간결한 생각들 : 생태 - 젠더 - 공산> 전시의 음악으로 참여했습니다. <br>전시는 앞으로의 세계에 대한 여러 음악가들의 의견을 담은 작품들을 컬렉팅한 후, 시민들이 그 음악들을 들으며 갤러리 근방을 돌아다니며 감상하는 과정을 통해 전시의 일부로 참여하게끔 진행하였습니다. <br>저는 앰비언트 트랙 <침잠을 위한 시퀀스 (Sequence for Sinking)>으로 전시에 참여하여, 혼란스러운 세계에서 단단한 논리를 가지고 나아가자는 메세지를 전하고자 했습니다.',
+    'themeColor' : {
+        'bg' : '#07C4D9',
+        'contents' : 'black'
+        }
 }
-const datura = {
-    'id' : 'project-datura',
-    'title' : 'DATURA : testtape',
+
+const kang = {
+    'id' : 'project-kang',
+    'title' : '<옆복도 괴물군> 사운드트랙',
     'img_source' : [{
         'imgIndex' : 1,
-        'src' : 'src/img/project_source/datura_1.jpeg',
-        'width' : `${albumSizeWidth}px`,
-        'height' : `${albumSizeHeight}px`
+        'src' : 'src/img/project_source/kang_1.png',
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
+    },{
+        'imgIndex' : 2,
+        'src' : 'src/img/project_source/kang_2.png',
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
+    },{
+        'imgIndex' : 3,
+        'src' : 'src/img/project_source/kang_3.png',
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
+    },{
+        'imgIndex' : 4,
+        'src' : 'src/img/project_source/kang_4.png',
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
     }],
     'video' : null,
-    'index' : '1 Song (Ambient), 2021',
-    'description' : "DATURA : testtape은 Wolf Kooky의 데뷔 EP입니다. <br>'독말풀'이라는 뜻의 datura라는 단어에서 영감을 받아 전체적인 음악적 분위기를 구현하였습니다. test tape이라는 부제에서 알 수 있듯, 일종의 음악적 장르의 탐구와 실험을 통해 나온 결과물을 모아둔 음반입니다. <br><br>영상 : 17 oz<br>음악 및 엔지니어링 : 신지웅<br>보컬 : Wolf Kooky"
+    'index' : 'Soundtrack, 2023',
+    'description' : "<옆복도 괴물군>은 김동연 감독의 2023년 단편 영화입니다. <br>학교에 서식하는 괴물 '캉'과 친구가 되려는 괴물 연구 동아리장 '승찬'과 학교 경비원 사이에서 벌어지는 이야기를 담은 작품입니다. <br>저는 이 작품의 사운드트랙을 작업하여, 영화가 주는 엉뚱하고 몽환적인 분위기를 재즈 장르를 기반으로 한 음악으로 표현했습니다.",
+    'themeColor' : {
+        'bg' : '#021F59',
+        'contents' : 'white'
+        }
+}
+const reservoir = {
+    'id' : 'project-reservoir',
+    'title' : 'Reservoir Dogs Mix',
+    'img_source' : [{
+        'imgIndex' : 1,
+        'src' : 'src/img/project_source/reservoir_1.png',
+        'width' : `${albumSizeWidth}px`,
+        'height' : `${albumSizeHeight}px`
+    },{
+        'imgIndex' : 2,
+        'src' : 'src/img/project_source/dj_img.jpeg',
+        'width' : `${posterSizeWidth}px`,
+        'height' : `${posterSizeHeight -100}px`
+    }],
+    'video' : null,
+    'index' : 'Mixset, Cover Design, 2022',
+    'description' : "Reservoir Dogs 믹스셋은 홍대에 위치한 주점 '저수지'의 오프닝 행사를 위해 제작한 믹스셋입니다. <br>'저수지'는 '낚시'라는 테마를 가지고 있습니다. <br>믹스셋은 부드러우면서도 리듬감을 느낄 수 있는 곡들을 선별하여 행사에 맞는 분위기를 연출하였고, '낚시'라는 키워드에 중점을 두어 커버 아트워크를 디자인했습니다.",
+    'link' : {
+        'src' : 'https://soundcloud.com/montikayoti/reservoir_dogs_mixmp3?in=montikayoti/sets/mix&si=38d19a321fc0423890940e1e057de37c&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+        'name' : '들어보기'
+    },
+    'themeColor' : {
+        'bg' : 'white',
+        'contents' : 'black'
+        }
 }
 const underfoot = {
     'id' : 'project-underfoot',
@@ -70,7 +122,15 @@ const underfoot = {
         'height' : `${videoHeight}px`
     }],
     'index' : 'Website Development, Logo Design, 2023',
-    'description' : "UNDERFOOT은 서울을 기반으로 활동하는 예술인 집단입니다. <br>'우리의 발 아래에 있는 -'이란 뜻의 Underfoot은 음지에 존재하는 다양한 문화들을 상징합니다.<br>'발 밑에 존재한다'는 데에서 착안하여 웹사이트와 로고의 디자인을 '하강'이라는 키워드를 중점으로 작업했습니다.<br><br>웹사이트 기획 / 디자인 / 개발 : 신지웅<br>로고 디자인 : 신지웅"
+    'description' : "UNDERFOOT은 서울을 기반으로 활동하는 예술인 집단입니다. <br>'우리의 발 아래에 있는 -'이란 뜻의 Underfoot은 음지에 존재하는 다양한 문화들을 상징합니다.<br>'발 밑에 존재한다'는 데에서 착안하여 웹사이트의 동작방식을 하강하는 방식으로 제작하고, 로고 디자인에서 내려다보는 느낌을 표현했습니다.",
+    'link' : {
+        'src' : 'https://www.underfoot.place/',
+        'name' : 'www.underfoot.place'
+    },
+    'themeColor' : {
+        'bg' : 'rgb(0, 10, 255)',
+        'contents' : 'rgb(255, 255, 255)'
+        }
 }
 
 const casper = {
@@ -81,14 +141,23 @@ const casper = {
         'src' : 'src/img/project_source/casper_1.jpeg',
         'width' : `${wideScreenWidth}px`,
         'height' : `${wideScreenHeight}px`
+    },{
+        'imgIndex' : 2,
+        'src' : 'src/img/project_source/casper_2.jpeg',
+        'width' : `${albumSizeWidth}px`,
+        'height' : `${albumSizeHeight}px`
     }],
     'video' : [{
-        'src' : 'src/project_vid/CASPER.mp4',
+        'src' : 'src/project_vid/KASINAxCASPER.mp4',
         'width' : `${videoWidth}px`,
         'height' : `${videoHeight}px`
     }],
     'index' : '1 Song, 2022',
-    'description' : '현대자동차의 캐스퍼와 카시나의 협업 이벤트의 공식 광고 음악을 작업했습니다. <br><br>애니메이션 : Cary Nam<br>음악 : 신지웅<br>제작 총괄 : .WAV'
+    'description' : "현대자동차의 캐스퍼 모델과 국내 스트릿 기반의 편집샵 KASINA와의 협업 라인입니다. <br>'Urban Rally'라는 키워드를 중점으로 도심을 계속해서 달리는 이미지를 음악으로 표현하였습니다.",
+    'themeColor' : {
+        'bg' : '#F2F2F2',
+        'contents' : 'black'
+        }
 }
 
 const shia = {
@@ -101,17 +170,33 @@ const shia = {
         'height' : `${videoHeight}px`
     }],
     'video' : [{
-        'src' : 'src/project_vid/DPSO.mp4',
+        'src' : 'src/project_vid/shia_vid_1.mp4',
+        'width' : `${logoSquareWidth}px`,
+        'height' : `${logoSquareHeight}px`
+    },{
+        'src' : 'src/project_vid/shia_vid_2.mp4',
+        'width' : `${logoSquareWidth}px`,
+        'height' : `${logoSquareHeight}px`
+    },{
+        'src' : 'src/project_vid/shia_vid_3.mp4',
         'width' : `${logoSquareWidth}px`,
         'height' : `${logoSquareHeight}px`
     }],
     'index' : 'Website Development, 2023',
-    'description' : ''
+    'description' : "샤이아를 화나게 하지 말라 (Don't Piss Shia Off)는 '빛바랜 아이디어들'이라는 키워드에서 출발하여 작업했습니다. <br>계속되는 자기의심과 불확실한 미래에 대한 두려움으로 항상 미뤄왔던, 번뜩이는 아이디어들을 지금 당장 실행하자는 메세지를 전달하고자 했습니다. <br>전세계적인 밈이 된 샤이아 라보프의 일명 'Do It!'영상에서 그는 '그만 미루고 지금 당장 꿈을 위한 무언가를 하라'는 메세지를 분노하며 전달하고 있습니다. <br>저는 이 영상에서 아이디어를 얻어서 샤이아 라보프가 소리치는 모습과 음성을 웹사이트에서 표현하고, 분노의 감정을 canvas.js를 활용하여 표현했습니다.",
+    'link' : {
+        'src' : 'https://shinnjiwoong.github.io/DONOTPISSOFFSHIA/',
+        'name' : 'www.DONOTPISSSHIAOFF.com'
+    },
+    'themeColor' : {
+        'bg' : 'rgb(0, 0, 0)',
+        'contents' : 'rgb(255, 255, 255)'
+        }
 }
 
 const sjw = {
     'id' : 'project-shinnjiwoong',
-    'title' : "shinnjiwoong.com (Ver.1)",
+    'title' : "포트폴리오 웹사이트",
     'img_source' : null,
     'video' : [{
         'src' : 'src/project_vid/SJW_vid_1.mp4',
@@ -123,7 +208,40 @@ const sjw = {
         'height' : `${videoHeight}px`
     }],
     'index' : 'Website Development, 2023',
-    'description' : ''
+    'description' : '2019년부터 2023년까지 작업했던 모든 프로젝트들을 모아둔 포트폴리오 웹사이트입니다. <br>화면을 4개의 구역으로 나누어서 다양한 분야에서의 작업물들을 동시다발적으로 표현했습니다. <br>클릭할 때마다 무작위로 변하는 색감과 직접 제작한 음악을 재생함으로서 웹사이트를 둘러보는 동안의 재미를 더했습니다.',
+    'link' : {
+        'src' : 'https://www.shinnjiwoong.com/',
+        'name' : 'www.shinnjiwoong.com'
+    },
+    'themeColor' : {
+        'bg' : 'rgb(185, 185, 185)',
+        'contents' : 'rgb(0, 0, 0)'
+        }
+}
+
+const picit = {
+    'id' : 'project-picit',
+    'title' : "PICIT!",
+    'img_source' : null,
+    'video' : [{
+        'src' : 'src/project_vid/picit_vid_1.mp4',
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
+    },{
+        'src' : 'src/project_vid/picit_vid_2.mp4',
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
+    },{
+        'src' : 'src/project_vid/picit_vid_3.mp4',
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
+    }],
+    'index' : 'Website Development, 2022',
+    'description' : 'PICIT!은 영단어 학습을 도와주는 웹사이트입니다. <br>사용자가 웹사이트에 영어 원서 이미지를 업로드하면, 문서 내의 해당하는 영단어를 찾아 의미를 보여주고, 사용자가 모르는 단어를 골라서 이메일로 공유할 수 있습니다. <br>광학 문자인식 기술 (Optical Character Recognition, OCR)과 자연어처리 기술 (Natural Language Processing, NLP) 및 웹 크롤링 기술을 결합하여 구현하였습니다. <br><br>*서울과학기술대학교의 졸업작품으로 제출하였습니다.',
+    'themeColor' : {
+        'bg' : '#05F228',
+        'contents' : 'black'
+        }
 }
 
 const umm1 = {
@@ -141,7 +259,15 @@ const umm1 = {
         'height' : `${albumSizeHeight}px`
     }],
     'index' : 'Mixset, Cover Design, 2022',
-    'description' : '한해의 봄을 맞이하여 제가 느끼는 봄을 떠올리며 고른 곡들을 모아둔 믹스셋입니다. '
+    'description' : "꽃내음 Vol.1은 '봄'을 떠올릴 수 있는 음악들을 선별하여 제작한 믹스셋입니다. <br>봄이라는 계절감이 주는 부드러우면서 향기로운 분위기를 표현할 수 있는 색감과 바이닐의 디자인 형식을 결합하여 시각적으로 표현했습니다.",
+    'link' : {
+        'src' : 'https://soundcloud.com/montikayoti/umm-vol1?in=montikayoti/sets/mix&si=e4814702263c4469aed3a674c49e4903&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+        'name' : '들어보기'
+    },
+    'themeColor' : {
+        'bg' : '#F2E399',
+        'contents' : 'black'
+        }
 }
 
 const mindcraft = {
@@ -155,15 +281,55 @@ const mindcraft = {
     },{
         'imgIndex' : 2,
         'src' : 'src/img/project_source/MINDCRAFT_2.png',
-        'width' : `${wideScreenWidth}px`,
-        'height' : `${wideScreenHeight}px`
+        'width' : `${videoWidth}px`,
+        'height' : `${videoHeight}px`
     }],
     'index' : '6 Songs, 2019',
-    'description' : '저에게 2019년은 꽤나 혼란스러운 시기였습니다. <br>그 가운데에서 저를 좌절에 빠지지 않도록 할 수 있는 6개의 메세지를 담은 곡을 만들어 공개하였습니다.'
+    'description' : "MINDCRAFT는 6곡의 음악이 담긴 EP입니다. <br>물질적인 세계를 살아가면서 다가오는 많은 욕망에 대해 어떻게 대처하면서 삶을 살아가야할지에 대한 고민을 통해 나온 생각들을 표현하고자 했습니다. <br>각 트랙의 제목은 이러한 고민의 결과를 함축적으로 담고 있으며, 주제의식에 맞게 음악을 표현했습니다.",
+    'link' : {
+        'src' : 'https://soundcloud.com/montikayoti/sets/mindcraft?si=22177b833fb5459e9acc77d71be65585&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+        'name' : '들어보기'
+    },
+    'themeColor' : {
+        'bg' : 'white',
+        'contents' : 'black'
+        }
+}
+
+const kaffe = {
+    'id' : 'project-kaffe',
+    'title' : 'KASINA Kaffe',
+    'img_source' : [{
+        'imgIndex' : 1,
+        'src' : 'src/img/project_source/wav-kaffe-1.png',
+        'width' : `${albumSizeWidth}px`,
+        'height' : `${albumSizeHeight}px`
+    },{
+        'imgIndex' : 2,
+        'src' : 'src/img/project_source/kaffe_1.jpeg',
+        'width' : `${posterSizeWidth}px`,
+        'height' : `${posterSizeHeight}px`
+    },{
+        'imgIndex' : 3,
+        'src' : 'src/img/project_source/kaffe_2.jpeg',
+        'width' : `${posterSizeWidth}px`,
+        'height' : `${posterSizeHeight}px`
+    },{
+        'imgIndex' : 4,
+        'src' : 'src/img/project_source/kaffe_3.jpeg',
+        'width' : `${posterSizeWidth}px`,
+        'height' : `${posterSizeHeight}px`
+    }],
+    'index' : '1 Song, 2022',
+    'description' : "KASINA Kaffe는 신사동에 위치한 카시나의 카페테리아 브랜드입니다. <br>새로운 오픈을 맞이한 이벤트의 커머셜 음악을 작업하여 카페가 추구하는 세련되면서도 따듯한 이미지를 음악적으로 구현하고자 하였습니다.",
+    'themeColor' : {
+        'bg' : '#F2AEAE',
+        'contents' : 'black'
+        }
 }
 
 
-const projectList = [altGal, umm1, mindcraft, underfoot, shia, casper, datura, sjw]
+const projectList = [altGal, umm1, mindcraft, underfoot, shia, casper, kang, sjw, picit, reservoir, kaffe]
 
 
 
@@ -192,6 +358,10 @@ const introductionCategoryTitle = document.getElementById('introduction-title')
 // const resumeDescription = document.getElementById('resume-description');
 // const resumeDescWrapper = document.getElementById('resume-desc-wrapper')
 
+const introContentsTitles = document.querySelectorAll('.introduction-contents-title');
+const introductionBG = document.getElementById('introduction-header-bg')
+const detailBtn = document.querySelectorAll('.introduction-detail-btn-wrapper')
+
 const boxes = document.querySelectorAll('.box');
 
 const resumeArrow = document.getElementById('resume-arrow-wrapper')
@@ -206,12 +376,15 @@ const projectContentsWrapper = document.getElementById('project-desc-contents-wr
 const projectDescDetailBtn = document.getElementById('project-desc-detail-btn');
 const projectDescInfoWrapper = document.getElementById('project-desc-info-wrapper');
 const projectFilters = document.querySelectorAll('.project-filter')
+const projectYearFilters = document.querySelectorAll('.project-year-filter')
 const projectDescription = document.getElementById('project-description')
 const projectIndex = document.getElementById('project-index');
 const projectTitle = document.getElementById('project-desc-title');
+const projectLink = document.getElementById('project-link')
 
 
 const projectDescMediaWrapper = document.getElementById('project-desc-media-wrapper');
+
 
 const projectSlidingWrapperDom = projectSlidingWrapper.getBoundingClientRect();
 const projectDescRect = projectDescWrapper.getBoundingClientRect();
@@ -294,8 +467,8 @@ function resumeContentsInit(){
     })
     
     const ground = Matter.Bodies.rectangle(cw/2, ch, cw, 200, {isStatic : true});
-    const wallLeft = Matter.Bodies.rectangle(0, ch, 1, 3000, {isStatic : true});
-    const wallRight = Matter.Bodies.rectangle(cw-100, ch, 1, 3000, {isStatic : true});
+    const wallLeft = Matter.Bodies.rectangle(-60, ch, 1, 3000, {isStatic : true});
+    const wallRight = Matter.Bodies.rectangle(cw-60, ch, 1, 3000, {isStatic : true});
     
     box1.body.restitution = 1;
     box2.body.restitution = 0.8;
@@ -322,7 +495,7 @@ function resumeContentsInit(){
 
 // Chatbot's words
 
-let chatbotText1 = `안녕하세요 일상의 실천 여러분! \n인사드리게 되어 반갑습니다 :) \n저는 프론트엔드 개발을 하고 있는 신지웅입니다.\n 일상의 실천의 인턴쉽 프로그램에 지원하고자 이 웹사이트를 제작하게 되었습니다.\n아래쪽의 화살표 버튼을 통해 페이지를 이동하실 수 있습니다!\n재미있게 봐주세요!`;
+let chatbotText1 = `안녕하세요 일상의 실천 여러분! \n저는 프론트엔드 개발을 하고 있는 신지웅입니다.\n 일상의 실천의 인턴쉽 프로그램에 지원하고자 이 웹사이트를 제작하게 되었습니다.\n하단의 화살표 버튼을 통해 사이트를 둘러봐주세요!`;
 
 // EVENT LISTENERS
 
@@ -355,8 +528,8 @@ window.addEventListener('mousemove', (e)=>{
 
 // PART 2. RESUME & INTRODUCTION
 
-let resumeSectionColor = 'rgb(175, 223, 166)'
-let introductionSectionColor = 'rgb(204, 153, 204)'
+let resumeSectionColor = 'rgb(255, 153, 0)'
+let introductionSectionColor = 'rgb(0, 102, 255)'
 
 resAndIntroSec.addEventListener('mousemove', (e)=>{
     const pageRect = resAndIntroSec.getBoundingClientRect();
@@ -377,15 +550,15 @@ resumeHeaderSection.addEventListener('click', async ()=>{
     sectionsWrapper.classList.remove('section-initial')
     sectionsWrapper.classList.add('section-resume')
     resumeArrow.style.opacity = '1'
-    resumeHeaderSection.style.backgroundColor = resumeSectionColor
+    // resumeHeaderSection.style.backgroundColor = resumeSectionColor
     resumeContentsInit();
 })
 resumeSection.addEventListener('mouseenter', ()=>{
-    resumeHeaderSection.style.backgroundColor = resumeSectionColor
+    // resumeHeaderSection.style.backgroundColor = resumeSectionColor
     // resumeCategoryTitle.style.color = 'white'
 })
 resumeSection.addEventListener('mouseleave', ()=>{
-    resumeHeaderSection.style.backgroundColor = 'rgb(150, 150, 150)'
+    resumeHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)'
     // resumeCategoryTitle.style.color = 'initial'
 })
 resumeArrow.addEventListener('click', async ()=>{
@@ -397,8 +570,8 @@ resumeArrow.addEventListener('click', async ()=>{
     marker.style.display = 'block'
     // sectionsWrapper.classList.add('section-initial')
     resumeArrow.style.opacity = '0';
-    introHeaderSection.style.backgroundColor = 'rgb(150, 150, 150)';
-    resumeHeaderSection.style.backgroundColor = 'rgb(150, 150, 150)'
+    introHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)';
+    resumeHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)'
 })
 introductionSection.addEventListener('click', async ()=>{
     marker.style.display = 'none'
@@ -407,20 +580,23 @@ introductionSection.addEventListener('click', async ()=>{
     sectionsWrapper.classList.remove('section-initial')
     sectionsWrapper.classList.add('section-intro')
     resumeArrow.style.opacity = '1'
-    introHeaderSection.style.backgroundColor = introductionSectionColor;
+    introHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)';
+    // introductionCategoryTitle.style.top = '0%'
+    // introductionCategoryTitle.style.left = '0%'
+    // introductionCategoryTitle.style.transform = 'none'
 })
 introductionSection.addEventListener('mouseenter', ()=>{
-    introHeaderSection.style.backgroundColor = introductionSectionColor
+    // introHeaderSection.style.backgroundColor = introductionSectionColor
     // introductionCategoryTitle.style.color = 'white'
 })
 introductionSection.addEventListener('mouseleave', ()=>{
-    introHeaderSection.style.backgroundColor = 'rgb(150, 150, 150)'
+    introHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)'
     // introductionCategoryTitle.style.color = 'initial'
 })
 
 boxes.forEach((e) => {
     e.addEventListener('mouseenter', ()=>{
-        resumeHeaderSection.style.backgroundColor = resumeSectionColor
+        // resumeHeaderSection.style.backgroundColor = resumeSectionColor
         if(e.id == 'box-name'){
             resumeCategoryTitle.innerHTML = '신지웅 <br>Jiwoong Shinn'
         }else if(e.id == 'box-school'){
@@ -434,9 +610,9 @@ boxes.forEach((e) => {
         }
     })
     e.addEventListener('mouseleave', ()=>{
-        resumeCategoryTitle.innerHTML = '인적사항 (Personal Info.)'
-        resumeHeaderSection.style.backgroundColor = 'rgb(150, 150, 150)'
-        resumeCategoryTitle.style.color = 'initial'
+        resumeCategoryTitle.innerHTML = '인적사항'
+        resumeHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)'
+        // resumeCategoryTitle.style.color = 'initial'
     })
 })
 
@@ -480,6 +656,7 @@ function appendVideo(project, index){
     videoEl.setAttribute('src', videoInfo.src);
     videoEl.setAttribute('loop', '');
     videoEl.setAttribute('autoplay', '');
+    videoEl.setAttribute('muted', '');
     videoEl.classList.add('project-video')
     videoEl.style.width = videoInfo.width;
     videoEl.style.height = videoInfo.height;
@@ -495,15 +672,25 @@ function appendVideo(project, index){
 }
 
 function showProject(id){
-    console.log(id)
     for(let i = 0; i < projectList.length; i++){
 
         if(projectList[i].id == id){
             // 프로젝트 이전 정보 초기화
+
+            if(projectList[i].themeColor){
+                portSec.style.setProperty('--port-bg-color', projectList[i].themeColor.bg);
+                portSec.style.setProperty('--port-contents-color', projectList[i].themeColor.contents);
+            }else{
+                portSec.style.setProperty('--port-bg-color', 'rgb(255, 255, 255)');
+                portSec.style.setProperty('--port-contents-color', 'rgb(0, 0, 0)');
+            }
             projectDescMediaWrapper.innerHTML = '';
             projectDescription.innerHTML = '';
             projectIndex.innerHTML = '';
-            projectTitle.innerHTML = ''
+            projectTitle.innerHTML = '';
+            projectLink.setAttribute('href', '')
+            projectLink.innerHTML = '';
+
 
             if(projectList[i].video){
                 for(let j = 0; j < projectList[i].video.length; j++){
@@ -518,7 +705,11 @@ function showProject(id){
             projectDescription.innerHTML = projectList[i].description
             projectIndex.innerHTML = projectList[i].index
             projectTitle.innerHTML = projectList[i].title
-    
+
+            if(projectList[i].link){
+                projectLink.setAttribute('href', projectList[i].link.src);
+                projectLink.innerHTML = projectList[i].link.name
+            }
         }
     }
     
@@ -536,43 +727,53 @@ projects.forEach((dom, index) => {
 
     // portfolioContentsWrapper.onmousemove = move;
 
-    portfolioContentsWrapper.addEventListener('mousemove', (e)=>{
-        move(dom, e)
+    dom.addEventListener('click', ()=>{
+        dropSentence.style.opacity = '0';
+        projectDescInfoWrapper.classList.remove('project-desc-show')
+        projectDescDetailBtn.classList.remove('detailBtnRotate')
+        projectContentsWrapper.style.opacity = '1';
+        detailBtn.style.transform = 'rotate(45deg)'
+        showProject(child.id);
+        initProject(index);
     })
-    dom.addEventListener('mousedown', (e)=>{
-        console.log(dom)
-        start(dom, e)
-    })
-    dom.addEventListener('mouseup', (e)=>{
-        end(dom)
 
-        if(e.clientX > projectDescRect.x){
-            projectContentsWrapper.style.opacity = '1';
-            detailBtn.style.transform = 'rotate(45deg)'
-            showProject(child.id);
-            initProject(index);
-        }else{
-            // projectDescWrapper.style.backgroundColor = 'white'
-            projectContentsWrapper.style.opacity = '0';
-        }
-    })
-    dom.addEventListener('mouseenter', ()=>{
-        // dom.style.backgroundColor ='rgb(255,255,0)';
-    })
-    dom.addEventListener('mouseleave', ()=>{
-        // dom.style.backgroundColor ='none';
-    })
+    // portfolioContentsWrapper.addEventListener('mousemove', (e)=>{
+    //     move(dom, e)
+    // })
+    // dom.addEventListener('mousedown', (e)=>{
+    //     console.log(dom)
+    //     start(dom, e)
+    // })
+    // dom.addEventListener('mouseup', (e)=>{
+    //     end(dom)
+
+    //     if(e.clientX > projectDescRect.x){
+    //         projectContentsWrapper.style.opacity = '1';
+    //         detailBtn.style.transform = 'rotate(45deg)'
+    //         showProject(child.id);
+    //         initProject(index);
+    //     }else{
+    //         // projectDescWrapper.style.backgroundColor = 'white'
+    //         projectContentsWrapper.style.opacity = '0';
+    //     }
+    // })
+    // dom.addEventListener('mouseenter', ()=>{
+    //     // dom.style.backgroundColor ='rgb(255,255,0)';
+    // })
+    // dom.addEventListener('mouseleave', ()=>{
+    //     // dom.style.backgroundColor ='none';
+    // })
     
     function start(dom, e) {
         dom.style.zIndex = '100'
         // dom.style.transform = 'rotate(45deg)'
         dom.style.position = 'absolute'
 
-        dom.style.border = 'solid 1px white'
+        dom.style.border = 'solid 1px black'
         prevPosX = e.clientX;
         prevPosY = e.clientY;
         dom.style.position = 'absolute'
-        dom.style.filter = 'drop-shadow(0px 0px 10px #000)'
+        dom.style.filter = 'drop-shadow(0px 0px 2px #000)'
         dom.style.backgroundColor = 'rgb(255,255,0))'
         isPress = true;
         dropSentence.style.opacity = '1';
@@ -614,7 +815,6 @@ projects.forEach((dom, index) => {
 
 projectDescDetailBtn.addEventListener('click', ()=>{
     projectDescInfoWrapper.classList.toggle('project-desc-show')
-
     projectDescDetailBtn.classList.toggle('detailBtnRotate')
 })
 
@@ -633,6 +833,56 @@ projectFilters.forEach(filter => {
         })
     })
 })
+
+projectYearFilters.forEach((filter, index) => {
+    filter.addEventListener('click', (e)=>{
+        const indexTarget = e.target.id.substr(13);
+
+        projects.forEach(p => {
+            const projectTarget = p.children[0]
+
+            if(projectTarget.classList.contains(indexTarget)){
+                p.classList.remove('project-hide')
+            }else{
+                p.classList.add('project-hide')
+            }
+        })
+    })
+})
+
+// INTRODUCTION
+
+introContentsTitles.forEach((title, index) => {
+    title.addEventListener('mouseenter', ()=>{
+        introductionBG.style.display = 'block'
+        
+        if(title.id == 'grow'){
+            introductionBG.style.animation = 'growAnimation 1s cubic-bezier(.75,0,.3,1)  infinite'
+            introductionBG.style.backgroundColor = 'rgb(255, 255, 0)'
+        }else if(title.id == 'expand'){
+            introductionBG.style.animation = 'expandAnimation 1s cubic-bezier(.75,0,.3,1)  infinite'
+            introductionBG.style.backgroundColor = 'rgb(0, 153, 255)'
+        }else{
+            introductionBG.style.animation = 'createAnimation 2s cubic-bezier(.75,0,.3,1)  infinite alternate'
+            introductionBG.style.backgroundColor = 'rgb(51, 204, 51)'
+        }
+    })
+
+    title.addEventListener('mouseleave', ()=>{
+        introductionBG.style.animation = 'none'
+        introductionBG.style.display = 'none'
+    })
+
+    title.addEventListener('click', ()=>{
+        let wrapper = title.parentElement.parentElement;
+        
+
+        detailBtn[index].classList.toggle('detailBtnRotate');
+        title.classList.toggle('introduction-contents-title-selected');
+        wrapper.classList.toggle('introduction-text-show');
+    })
+})
+
 
 // INTRO TYPING
 

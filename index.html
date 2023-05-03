@@ -58,7 +58,7 @@
             </div>
           </div>
           <div id="resume-header-section">
-            <p id="resume-title">인적사항 (Personal Info.)</p>
+            <p id="resume-title">인적사항</p>
             <div id="resume-desc-wrapper">
               <img src="" alt="" id="resume-img" />
               <div id="resume-description"></div>
@@ -67,9 +67,81 @@
         </section>
         <section id="introduction-section">
           <div id="introduction-header-section">
-            <div id="introduction-title">자기소개서 (Self-Statement)</div>
+            <div id="introduction-header-bg"></div>
+            <div id="introduction-title">자기소개서</div>
           </div>
-          <div id="introduction-contents-section"></div>
+          <div id="introduction-contents-section">
+            <div class="introduction-single-wrapper">
+              <div class="introduction-title-wrapper">
+                <p id="grow" class="introduction-contents-title">Grow</p>
+                <!-- <p id="grow" class="introduction-contents-subtitle">성장</p> -->
+                <div class="introduction-detail-btn-wrapper">
+                  <img
+                    src="src/img/buttons/detail.png"
+                    alt=""
+                    class="introduction-detail-btn"
+                  />
+                </div>
+              </div>
+              <div class="introduction-text-wrapper">
+                <p class="introduction-text">
+                  저는 계속해서 성장하는 것에 보람을 느낍니다.
+                </p>
+              </div>
+            </div>
+            <div class="introduction-single-wrapper">
+              <div class="introduction-title-wrapper">
+                <p id="expand" class="introduction-contents-title">Expand</p>
+                <!-- <p id="expand" class="introduction-contents-subtitle">확장</p> -->
+                <div class="introduction-detail-btn-wrapper">
+                  <img
+                    src="src/img/buttons/detail.png"
+                    alt=""
+                    class="introduction-detail-btn"
+                  />
+                </div>
+              </div>
+              <div class="introduction-text-wrapper">
+                <p class="introduction-text">
+                  저는 창의적인 일을 사랑합니다. <br />
+                  고등학생때부터 시작한 작곡활동은 2019년 전자음악
+                  프로듀서로서의 데뷔로 이끌었습니다.
+                </p>
+              </div>
+            </div>
+            <div class="introduction-single-wrapper">
+              <div class="introduction-title-wrapper">
+                <p id="create" class="introduction-contents-title">Create</p>
+                <!-- <p id="create" class="introduction-contents-subtitle">창조</p> -->
+                <div class="introduction-detail-btn-wrapper">
+                  <img
+                    src="src/img/buttons/detail.png"
+                    alt=""
+                    class="introduction-detail-btn"
+                  />
+                </div>
+              </div>
+              <div class="introduction-text-wrapper">
+                <p class="introduction-text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Pariatur, eum maiores rem, quod, autem ut possimus
+                  exercitationem error a et non ullam minima deleniti debitis
+                  accusamus optio eius. Saepe, exercitationem! Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Doloribus nobis aliquam
+                  provident similique a delectus necessitatibus! Eligendi sed
+                  commodi, beatae totam, pariatur harum sunt veritatis vitae
+                  ipsa repudiandae, eaque delectus. Lorem ipsum dolor, sit amet
+                  consectetur adipisicing elit. Pariatur, eum maiores rem, quod,
+                  autem ut possimus exercitationem error a et non ullam minima
+                  deleniti debitis accusamus optio eius. Saepe, exercitationem!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus nobis aliquam provident similique a delectus
+                  necessitatibus! Eligendi sed commodi, beatae totam, pariatur
+                  harum sunt veritatis vitae ipsa repudiandae, eaque delectus.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
         <div id="marker"></div>
       </div>
@@ -78,13 +150,7 @@
     <section id="portfolio-section">
       <div id="portfolio-contents-wrapper">
         <div id="port-project-wrapper">
-          <div id="port-header-wrapper">
-            <!-- <div id="port-header-box">
-              <p id="port-header">
-                왼쪽의 프로젝트를 끌어다 오른쪽에 놓으시면 프로젝트 설명을 보실
-                수 있습니다.
-              </p>
-            </div> -->
+          <div class="port-header-wrapper">
             <div id="port-header-filter">
               <p id="project-all" class="project-filter">All</p>
               <p id="project-music" class="project-filter">Music</p>
@@ -93,10 +159,23 @@
               <p id="project-graphic" class="project-filter">Graphic</p>
             </div>
           </div>
+          <div class="port-header-wrapper">
+            <div id="port-header-year-filter">
+              <!-- <p id="project-year-all" class="project-filter">All</p> -->
+              <p id="project-year-2023" class="project-year-filter">2023</p>
+              <p id="project-year-2022" class="project-year-filter">2022</p>
+              <p id="project-year-2021" class="project-year-filter">2021</p>
+              <p id="project-year-2020" class="project-year-filter">2020</p>
+              <p id="project-year-2019" class="project-year-filter">2019</p>
+            </div>
+          </div>
           <div id="projects-sliding-wrapper">
             <div class="single-project-wrapper">
-              <p id="project-shinnjiwoong" class="single-project web music all">
-                shinnjiwoong.com
+              <p
+                id="project-shinnjiwoong"
+                class="single-project web music all 2023"
+              >
+                포트폴리오 웹사이트
               </p>
               <img
                 src="./src/img/buttons/detail.png"
@@ -105,7 +184,7 @@
               />
             </div>
             <div class="single-project-wrapper">
-              <p id="project-shia" class="single-project web all">
+              <p id="project-shia" class="single-project web all 2023">
                 샤이아를 화나게 하지 말라
               </p>
               <img
@@ -115,7 +194,7 @@
               />
             </div>
             <div class="single-project-wrapper">
-              <p id="project-altgal" class="single-project music all">
+              <p id="project-altgal" class="single-project music all 2021">
                 &lt;간결한 생각들 : 생태 - 젠더 - 공산&gt;
               </p>
               <img
@@ -125,8 +204,11 @@
               />
             </div>
             <div class="single-project-wrapper">
-              <p id="project-underfoot" class="single-project web graphic all">
-                Underfoot
+              <p
+                id="project-underfoot"
+                class="single-project web graphic all 2023"
+              >
+                Underfoot 웹사이트
               </p>
               <img
                 src="./src/img/buttons/detail.png"
@@ -135,7 +217,9 @@
               />
             </div>
             <div class="single-project-wrapper">
-              <p id="project-umm" class="single-project mix all">Umm Vol.1</p>
+              <p id="project-picit" class="single-project web all 2022">
+                PicIt!
+              </p>
               <img
                 src="./src/img/buttons/detail.png"
                 alt=""
@@ -143,15 +227,7 @@
               />
             </div>
             <div class="single-project-wrapper">
-              <p id="project-picit" class="single-project web all">PicIt!</p>
-              <img
-                src="./src/img/buttons/detail.png"
-                alt=""
-                class="project-detail-btn"
-              />
-            </div>
-            <div class="single-project-wrapper">
-              <p id="project-casper" class="single-project music all">
+              <p id="project-casper" class="single-project music all 2022">
                 HYUNDAI CASPER x Kasina
               </p>
               <img
@@ -161,7 +237,9 @@
               />
             </div>
             <div class="single-project-wrapper">
-              <p id="project-exodus" class="single-project music all">EXODUS</p>
+              <p id="project-kang" class="single-project music all 2023">
+                옆복도 괴물군
+              </p>
               <img
                 src="./src/img/buttons/detail.png"
                 alt=""
@@ -169,7 +247,30 @@
               />
             </div>
             <div class="single-project-wrapper">
-              <p id="project-mindcraft" class="single-project music all">
+              <p id="project-umm" class="single-project mix graphic all 2022">
+                Umm Vol.1
+              </p>
+              <img
+                src="./src/img/buttons/detail.png"
+                alt=""
+                class="project-detail-btn"
+              />
+            </div>
+            <div class="single-project-wrapper">
+              <p
+                id="project-reservoir"
+                class="single-project mix graphic all 2022"
+              >
+                Reservoir Dogs Mix
+              </p>
+              <img
+                src="./src/img/buttons/detail.png"
+                alt=""
+                class="project-detail-btn"
+              />
+            </div>
+            <div class="single-project-wrapper">
+              <p id="project-mindcraft" class="single-project music all 2019">
                 Mindcraft
               </p>
               <img
@@ -179,8 +280,8 @@
               />
             </div>
             <div class="single-project-wrapper">
-              <p id="project-datura" class="single-project music all">
-                DATURA : testtape
+              <p id="project-kaffe" class="single-project music all 2022">
+                KASINA Kaffe
               </p>
               <img
                 src="./src/img/buttons/detail.png"
@@ -194,7 +295,7 @@
           </div>
         </div>
         <div id="port-desc-wrapper">
-          <div id="port-header-wrapper">
+          <div class="port-header-wrapper">
             <!-- <div id="port-header-box">
               <p id="port-header">
                 왼쪽의 프로젝트를 끌어다 오른쪽에 놓으시면 프로젝트 설명을 보실
@@ -207,7 +308,7 @@
           </div>
           <div id="project-desc-wrapper">
             <div id="drop-sentence-wrapper">
-              <p id="drop-sentence">DROP HERE</p>
+              <p id="drop-sentence">왼쪽의 프로젝트를 클릭하세요</p>
             </div>
             <div id="project-desc-contents-wrapper">
               <div id="project-desc-media-wrapper"></div>
@@ -222,6 +323,7 @@
                 <p id="project-desc-title"></p>
                 <p id="project-index"></p>
                 <p id="project-description"></p>
+                <a href="" id="project-link" target="_blank"></a>
                 <div id="ghost-div"></div>
               </div>
             </div>
