@@ -35,6 +35,10 @@ const altGal = {
     'video' : null,
     'index' : '1 Song (Ambient), 2021',
     'description' : '대안공간루프 (AltGalLoop)에서 진행했던 <간결한 생각들 : 생태 - 젠더 - 공산> 전시의 음악으로 참여했습니다. <br>전시는 앞으로의 세계에 대한 여러 음악가들의 의견을 담은 작품들을 컬렉팅한 후, 시민들이 그 음악들을 들으며 갤러리 근방을 돌아다니며 감상하는 과정을 통해 전시의 일부로 참여하게끔 진행하였습니다. <br>저는 앰비언트 트랙 <침잠을 위한 시퀀스 (Sequence for Sinking)>으로 전시에 참여하여, 혼란스러운 세계에서 단단한 논리를 가지고 나아가자는 메세지를 전하고자 했습니다.',
+    'link' : {
+        'src' : 'https://soundcloud.com/montikayoti/a-sequence-for-sinking?si=7e57776a032a4334ba0edf052a0c5e02&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+        'name' : '들어보기'
+    },
     'themeColor' : {
         'bg' : '#07C4D9',
         'contents' : 'black'
@@ -404,7 +408,7 @@ function resumeContentsInit(){
     const box1 = {
         w: 140,
         h: 80,
-        body: Matter.Bodies.circle(cw/2, 0, 125),
+        body: Matter.Bodies.circle(cw/2-50, 0, 100),
         elem: document.querySelector("#box-name"),
         render() {
           const {x, y} = this.body.position;
@@ -416,7 +420,7 @@ function resumeContentsInit(){
     const box2 = {
         w: 140,
         h: 80,
-        body: Matter.Bodies.circle(cw/2, 0, 125),
+        body: Matter.Bodies.circle(cw/2, 0, 100),
         elem: document.querySelector("#box-birthday"),
         render() {
           const {x, y} = this.body.position;
@@ -428,7 +432,7 @@ function resumeContentsInit(){
     const box3 = {
         w: 140,
         h: 80,
-        body: Matter.Bodies.circle(cw/2, 0, 125),
+        body: Matter.Bodies.rectangle(cw/2, 0, 200, 200),
         elem: document.querySelector("#box-school"),
         render() {
           const {x, y} = this.body.position;
@@ -440,7 +444,7 @@ function resumeContentsInit(){
     const box4 = {
         w: 140,
         h: 80,
-        body: Matter.Bodies.circle(cw/2, 0, 125),
+        body: Matter.Bodies.circle(cw/2, 0, 100),
         elem: document.querySelector("#box-contact"),
         render() {
           const {x, y} = this.body.position;
@@ -452,7 +456,7 @@ function resumeContentsInit(){
     const box5 = {
         w: 140,
         h: 80,
-        body: Matter.Bodies.circle(cw/2, 0, 125),
+        body: Matter.Bodies.circle(cw/2, 0, 100),
         elem: document.querySelector("#box-area"),
         render() {
           const {x, y} = this.body.position;
@@ -467,7 +471,7 @@ function resumeContentsInit(){
     })
     
     const ground = Matter.Bodies.rectangle(cw/2, ch, cw, 200, {isStatic : true});
-    const wallLeft = Matter.Bodies.rectangle(-60, ch, 1, 3000, {isStatic : true});
+    const wallLeft = Matter.Bodies.rectangle(0, ch, 1, 3000, {isStatic : true});
     const wallRight = Matter.Bodies.rectangle(cw-60, ch, 1, 3000, {isStatic : true});
     
     box1.body.restitution = 1;
@@ -523,6 +527,76 @@ headerDown.addEventListener('click', ()=>{
 window.addEventListener('mousemove', (e)=>{
     cursor.style.top = `${e.pageY}px`
     cursor.style.left = `${e.pageX}px`
+})
+
+
+const popups = document.querySelectorAll('.popup-wrapper');
+const popupDelete = document.querySelectorAll('.popup-delete');
+
+popupDelete.forEach(btn => {
+    btn.addEventListener('click', ()=>{
+        const parent = btn.parentElement.parentElement.parentElement
+
+        parent.style.display = 'none'
+    })
+})
+
+window.addEventListener('load',()=>{
+    introSection.scrollIntoView({behavior:'smooth'})
+    popups.forEach(dom => {
+        setTimeout(()=>{
+            dom.style.opacity = '1';
+        }, 500)
+    })
+})
+
+popups.forEach((dom, index) => {
+
+
+
+    let isPress = false,   // 마우스를 눌렀을 때
+    prevPosX = 0,      // 이전에 위치한 X값
+    prevPosY = 0;      // 이전에 위치한 Y값
+
+    introSection.addEventListener('mousemove', (e)=>{
+        move(dom, e)
+    })
+    dom.addEventListener('mousedown', (e)=>{
+        dom.style.zIndex = '100'
+        console.log(dom)
+        start(dom, e)
+    })
+    dom.addEventListener('mouseup', (e)=>{
+        dom.style.zIndex = '0'
+        end(dom)
+    })
+    
+    function start(dom, e) {
+        prevPosX = e.clientX;
+        prevPosY = e.clientY;
+
+        isPress = true;
+    }
+    // mousemove
+    function move(dom,e) {
+        if (!isPress) {
+          return;
+        }
+        // 이전 좌표와 현재 좌표 차이값
+        const posX = prevPosX - e.clientX; 
+        const posY = prevPosY - e.clientY; 
+        // 현재 좌표가 이전 좌표로 바뀜
+        prevPosX = e.clientX; 
+        prevPosY = e.clientY; 
+        // left, top으로 이동
+        dom.style.left = (dom.offsetLeft - posX) + "px";
+        dom.style.top = (dom.offsetTop - posY) + "px";
+    }
+    // mouseup
+    function end(dom) {
+        
+        isPress = false;
+    }
 })
 
 
@@ -719,9 +793,7 @@ projects.forEach((dom, index) => {
     let child = dom.children[0]
     const detailBtn = dom.querySelector('.project-detail-btn')
 
-    let isPress = false,   // 마우스를 눌렀을 때
-    prevPosX = 0,      // 이전에 위치한 X값
-    prevPosY = 0;      // 이전에 위치한 Y값
+
 
     // projectPos(dom)
 
@@ -737,79 +809,7 @@ projects.forEach((dom, index) => {
         initProject(index);
     })
 
-    // portfolioContentsWrapper.addEventListener('mousemove', (e)=>{
-    //     move(dom, e)
-    // })
-    // dom.addEventListener('mousedown', (e)=>{
-    //     console.log(dom)
-    //     start(dom, e)
-    // })
-    // dom.addEventListener('mouseup', (e)=>{
-    //     end(dom)
-
-    //     if(e.clientX > projectDescRect.x){
-    //         projectContentsWrapper.style.opacity = '1';
-    //         detailBtn.style.transform = 'rotate(45deg)'
-    //         showProject(child.id);
-    //         initProject(index);
-    //     }else{
-    //         // projectDescWrapper.style.backgroundColor = 'white'
-    //         projectContentsWrapper.style.opacity = '0';
-    //     }
-    // })
-    // dom.addEventListener('mouseenter', ()=>{
-    //     // dom.style.backgroundColor ='rgb(255,255,0)';
-    // })
-    // dom.addEventListener('mouseleave', ()=>{
-    //     // dom.style.backgroundColor ='none';
-    // })
     
-    function start(dom, e) {
-        dom.style.zIndex = '100'
-        // dom.style.transform = 'rotate(45deg)'
-        dom.style.position = 'absolute'
-
-        dom.style.border = 'solid 1px black'
-        prevPosX = e.clientX;
-        prevPosY = e.clientY;
-        dom.style.position = 'absolute'
-        dom.style.filter = 'drop-shadow(0px 0px 2px #000)'
-        dom.style.backgroundColor = 'rgb(255,255,0))'
-        isPress = true;
-        dropSentence.style.opacity = '1';
-    }
-    // mousemove
-    function move(dom,e) {
-        if (!isPress) {
-          return;
-        }
-        // 이전 좌표와 현재 좌표 차이값
-        const posX = prevPosX - e.clientX; 
-        const posY = prevPosY - e.clientY; 
-        // 현재 좌표가 이전 좌표로 바뀜
-        prevPosX = e.clientX; 
-        prevPosY = e.clientY; 
-        // left, top으로 이동
-        dom.style.left = (dom.offsetLeft - posX) + "px";
-        dom.style.top = (dom.offsetTop - posY) + "px";
-    }
-    // mouseup
-    function end(dom) {
-        dom.style.position = 'initial'
-        dom.style.left = 'initial';
-        dom.style.top = 'initial';
-        dom.style.filter = 'none'
-        // dom.style.backgroundColor = 'white'
-        dom.style.borderLeft = 'none'
-        dom.style.borderRight = 'none'
-        dom.style.borderBottom = 'solid 1px black'
-        dom.style.borderTop = 'none'
-        
-        dropSentence.style.opacity = '0';
-        // dom.children[0].style.color = 'black'
-        
-        isPress = false;
-    }
 
 })
 
@@ -818,35 +818,85 @@ projectDescDetailBtn.addEventListener('click', ()=>{
     projectDescDetailBtn.classList.toggle('detailBtnRotate')
 })
 
+function selectFilter(arr, id){
+    let length = arr.length;
+
+    for(let i = 0; i < length; i++){
+        if(arr[i].id == id){
+            arr[i].classList.add('filter-selected')
+        }else{
+            arr[i].classList.remove('filter-selected')
+        }
+    }
+}
+
+function filterOut(scope, year){
+    projects.forEach(p => {
+        const projectTarget = p.children[0]
+
+        if(projectTarget.classList.contains(scope) && projectTarget.classList.contains(year)){
+            p.classList.remove('project-hide')
+        }else{
+            p.classList.add('project-hide')
+        }
+    })
+}
+
+let scopeFilter = 'all'
+let yearFilter = 'all'
+
 projectFilters.forEach(filter => {
     filter.addEventListener('click', (e)=>{
-        const indexTarget = e.target.id.substr(8);
+        const id = e.target.id;
+        const indexTarget = id.substr(8);
+        // let length = projectFilters.length;
 
-        projects.forEach(p => {
-            const projectTarget = p.children[0]
+        // for(let i = 0; i < length; i++){
+        //     if(projectFilters[i].id == id){
+        //         projectFilters[i].classList.add('filter-selected')
+        //     }else{
+        //         projectFilters[i].classList.remove('filter-selected')
+        //     }
+        // }
 
-            if(projectTarget.classList.contains(indexTarget)){
-                p.classList.remove('project-hide')
-            }else{
-                p.classList.add('project-hide')
-            }
-        })
+        scopeFilter = indexTarget;
+
+        selectFilter(projectFilters, id);
+
+        filterOut(scopeFilter, yearFilter)
+
+        // projects.forEach(p => {
+        //     const projectTarget = p.children[0]
+
+        //     if(projectTarget.classList.contains(indexTarget)){
+        //         p.classList.remove('project-hide')
+        //     }else{
+        //         p.classList.add('project-hide')
+        //     }
+        // })
     })
 })
 
 projectYearFilters.forEach((filter, index) => {
     filter.addEventListener('click', (e)=>{
-        const indexTarget = e.target.id.substr(13);
+        const id = e.target.id
+        const indexTarget = id.substr(13);
 
-        projects.forEach(p => {
-            const projectTarget = p.children[0]
+        selectFilter(projectYearFilters, id);
 
-            if(projectTarget.classList.contains(indexTarget)){
-                p.classList.remove('project-hide')
-            }else{
-                p.classList.add('project-hide')
-            }
-        })
+        yearFilter = indexTarget;
+
+        filterOut(scopeFilter, yearFilter);
+
+        // projects.forEach(p => {
+        //     const projectTarget = p.children[0]
+
+        //     if(projectTarget.classList.contains(indexTarget)){
+        //         p.classList.remove('project-hide')
+        //     }else{
+        //         p.classList.add('project-hide')
+        //     }
+        // })
     })
 })
 
@@ -857,11 +907,11 @@ introContentsTitles.forEach((title, index) => {
         introductionBG.style.display = 'block'
         
         if(title.id == 'grow'){
-            introductionBG.style.animation = 'growAnimation 1s cubic-bezier(.75,0,.3,1)  infinite'
-            introductionBG.style.backgroundColor = 'rgb(255, 255, 0)'
+            introductionBG.style.animation = 'growAnimation 1.5s cubic-bezier(.75,0,.3,1)  infinite'
+            introductionBG.style.backgroundColor = 'rgb(204, 255, 0)'
         }else if(title.id == 'expand'){
-            introductionBG.style.animation = 'expandAnimation 1s cubic-bezier(.75,0,.3,1)  infinite'
-            introductionBG.style.backgroundColor = 'rgb(0, 153, 255)'
+            introductionBG.style.animation = 'expandAnimation 1.5s cubic-bezier(.75,0,.3,1)  infinite'
+            introductionBG.style.backgroundColor = 'rgb(204, 51, 51)'
         }else{
             introductionBG.style.animation = 'createAnimation 2s cubic-bezier(.75,0,.3,1)  infinite alternate'
             introductionBG.style.backgroundColor = 'rgb(51, 204, 51)'
@@ -940,5 +990,5 @@ const showDialogue = async (dialogue) => {
 
 }
 
-showDialogue(chatbotText1)
+// showDialogue(chatbotText1)
 
