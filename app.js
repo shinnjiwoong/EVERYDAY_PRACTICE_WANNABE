@@ -34,7 +34,7 @@ const altGal = {
     }],
     'video' : null,
     'index' : '1 Song (Ambient), 2021',
-    'description' : '대안공간루프 (AltGalLoop)에서 진행했던 <간결한 생각들 : 생태 - 젠더 - 공산> 전시의 음악으로 참여했습니다. <br>전시는 앞으로의 세계에 대한 여러 음악가들의 의견을 담은 작품들을 컬렉팅한 후, 시민들이 그 음악들을 들으며 갤러리 근방을 돌아다니며 감상하는 과정을 통해 전시의 일부로 참여하게끔 진행하였습니다. <br>저는 앰비언트 트랙 <침잠을 위한 시퀀스 (Sequence for Sinking)>으로 전시에 참여하여, 혼란스러운 세계에서 단단한 논리를 가지고 나아가자는 메세지를 전하고자 했습니다.',
+    'description' : "2021년 대안공간루프 (AltGalLoop)에서 진행했던 <간결한 생각들 : 생태 - 젠더 - 공산> 전시의 음악으로 참여했습니다. <br>전시를 보는 시민들은, 권병준 작가가 제작한 헤드폰을 통해 '도래해 마땅한 사회의 모습'에 대한 고민이 담긴 여러 음악가의 곡들을 들으며 홍대를 걷는 활동을 진행했습니다.<br>저는 앰비언트 트랙 <침잠을 위한 시퀀스 (A Sequence for Sinking)>으로 전시에 참여하여, 혼란스러운 세계에서 내면으로 침잠하여 단단한 논리를 가지고 나아가자는 메세지를 전하고자 했습니다.",
     'link' : {
         'src' : 'https://soundcloud.com/montikayoti/a-sequence-for-sinking?si=7e57776a032a4334ba0edf052a0c5e02&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
         'name' : '들어보기'
@@ -71,7 +71,7 @@ const kang = {
     }],
     'video' : null,
     'index' : 'Soundtrack, 2023',
-    'description' : "<옆복도 괴물군>은 김동연 감독의 2023년 단편 영화입니다. <br>학교에 서식하는 괴물 '캉'과 친구가 되려는 괴물 연구 동아리장 '승찬'과 학교 경비원 사이에서 벌어지는 이야기를 담은 작품입니다. <br>저는 이 작품의 사운드트랙을 작업하여, 영화가 주는 엉뚱하고 몽환적인 분위기를 재즈 장르를 기반으로 한 음악으로 표현했습니다.",
+    'description' : "<옆복도 괴물군>은 김동연 감독의 2023년 단편 영화입니다. <br>학교에 서식하는 괴물 '캉', 그리고 그것과 친구가 되려는 괴물 연구 동아리장 '승찬'과 학교 경비원 사이에서 벌어지는 이야기를 담은 작품입니다. <br>저는 이 작품의 사운드트랙을 작업하여, 영화가 주는 엉뚱하고 몽환적인 분위기를 재즈 장르를 기반으로 한 음악으로 표현했습니다.",
     'themeColor' : {
         'bg' : '#021F59',
         'contents' : 'white'
@@ -88,7 +88,7 @@ const reservoir = {
     },{
         'imgIndex' : 2,
         'src' : 'src/img/project_source/dj_img.jpeg',
-        'width' : `${posterSizeWidth}px`,
+        'width' : `${posterSizeWidth-50}px`,
         'height' : `${posterSizeHeight -100}px`
     }],
     'video' : null,
@@ -126,7 +126,7 @@ const underfoot = {
         'height' : `${videoHeight}px`
     }],
     'index' : 'Website Development, Logo Design, 2023',
-    'description' : "UNDERFOOT은 서울을 기반으로 활동하는 예술인 집단입니다. <br>'우리의 발 아래에 있는 -'이란 뜻의 Underfoot은 음지에 존재하는 다양한 문화들을 상징합니다.<br>'발 밑에 존재한다'는 데에서 착안하여 웹사이트의 동작방식을 하강하는 방식으로 제작하고, 로고 디자인에서 내려다보는 느낌을 표현했습니다.",
+    'description' : "UNDERFOOT은 서울을 기반으로 활동하는 예술인 집단입니다. <br>'우리의 발 아래에 있는 -'이란 뜻의 Underfoot은 음지에 존재하는 다양한 문화들을 상징합니다.<br>'발 밑에 존재한다'는 데에서 착안하여, 웹사이트에 하강 스크롤링을 기반으로 한 애니메이션을 구현하고, 로고 디자인에서 또한 내려다보는 느낌을 표현했습니다.",
     'link' : {
         'src' : 'https://www.underfoot.place/',
         'name' : 'www.underfoot.place'
@@ -157,7 +157,11 @@ const casper = {
         'height' : `${videoHeight}px`
     }],
     'index' : '1 Song, 2022',
-    'description' : "현대자동차의 캐스퍼 모델과 국내 스트릿 기반의 편집샵 KASINA와의 협업 라인입니다. <br>'Urban Rally'라는 키워드를 중점으로 도심을 계속해서 달리는 이미지를 음악으로 표현하였습니다.",
+    'description' : "2022년도에 진행된 현대자동차의 캐스퍼 모델과 국내 스트릿 기반의 편집샵 KASINA와의 협업 라인은 'Urban Rally'라는 키워드를 중점으로 진행되었습니다. <br>저는 도심을 계속해서 달리는 랠리카의 이미지를 루핑되는 드럼 앤 베이스를 기반으로 표현했습니다.",
+    'link' : {
+        'src' : 'https://www.instagram.com/p/Cga69vaA7Lx/',
+        'name' : 'Instagram'
+    },
     'themeColor' : {
         'bg' : '#F2F2F2',
         'contents' : 'black'
@@ -241,7 +245,7 @@ const picit = {
         'height' : `${videoHeight}px`
     }],
     'index' : 'Website Development, 2022',
-    'description' : 'PICIT!은 영단어 학습을 도와주는 웹사이트입니다. <br>사용자가 웹사이트에 영어 원서 이미지를 업로드하면, 문서 내의 해당하는 영단어를 찾아 의미를 보여주고, 사용자가 모르는 단어를 골라서 이메일로 공유할 수 있습니다. <br>광학 문자인식 기술 (Optical Character Recognition, OCR)과 자연어처리 기술 (Natural Language Processing, NLP) 및 웹 크롤링 기술을 결합하여 구현하였습니다. <br><br>*서울과학기술대학교의 졸업작품으로 제출하였습니다.',
+    'description' : 'PICIT!은 영단어 학습을 도와주는 웹사이트입니다. <br>사용자가 웹사이트에 영어 원서 이미지를 업로드하면, 문서 내의 유의미한 영단어를 찾아 뜻하는 바를 보여주고, 사용자가 모르는 단어를 골라서 이메일로 공유할 수 있게 구현하였습니다. <br>광학 문자인식 기술 (Optical Character Recognition, OCR)과 자연어처리 기술 (Natural Language Processing, NLP) 및 웹 크롤링 기술을 결합하여 구현하였습니다. <br><br>*서울과학기술대학교의 졸업작품으로 제출하였습니다.',
     'themeColor' : {
         'bg' : '#05F228',
         'contents' : 'black'
@@ -285,7 +289,7 @@ const mindcraft = {
     },{
         'imgIndex' : 2,
         'src' : 'src/img/project_source/MINDCRAFT_2.png',
-        'width' : `${videoWidth}px`,
+        'width' : `${videoWidth-100}px`,
         'height' : `${videoHeight}px`
     }],
     'index' : '6 Songs, 2019',
@@ -362,9 +366,10 @@ const introductionCategoryTitle = document.getElementById('introduction-title')
 // const resumeDescription = document.getElementById('resume-description');
 // const resumeDescWrapper = document.getElementById('resume-desc-wrapper')
 
-const introContentsTitles = document.querySelectorAll('.introduction-contents-title');
+const introContentsTitles = document.querySelectorAll('.introduction-title-wrapper');
 const introductionBG = document.getElementById('introduction-header-bg')
 const detailBtn = document.querySelectorAll('.introduction-detail-btn-wrapper')
+const headerNotice = document.querySelectorAll('.header-notice-btn');
 
 const boxes = document.querySelectorAll('.box');
 
@@ -393,6 +398,8 @@ const projectDescMediaWrapper = document.getElementById('project-desc-media-wrap
 const projectSlidingWrapperDom = projectSlidingWrapper.getBoundingClientRect();
 const projectDescRect = projectDescWrapper.getBoundingClientRect();
 
+const colors = ['#01956e', '#99b5fb', '#ffed3b', '#eda488', '#0047f5', '#54c2cc', '#b0dce0', '#fe601e', '#b9a800', '#d8b5a8', '#FEC8DF', '#07A3FF', '#F5FF03', '#DBFFFF', '#F5DC11'];
+
 // Matter Js & Canvas
 
 function resumeContentsInit(){
@@ -408,7 +415,7 @@ function resumeContentsInit(){
     const box1 = {
         w: 140,
         h: 80,
-        body: Matter.Bodies.circle(cw/2-50, 0, 100),
+        body: Matter.Bodies.circle(cw/2-100, -10, 125),
         elem: document.querySelector("#box-name"),
         render() {
           const {x, y} = this.body.position;
@@ -420,7 +427,7 @@ function resumeContentsInit(){
     const box2 = {
         w: 140,
         h: 80,
-        body: Matter.Bodies.circle(cw/2, 0, 100),
+        body: Matter.Bodies.circle(cw/2-50, -50, 125),
         elem: document.querySelector("#box-birthday"),
         render() {
           const {x, y} = this.body.position;
@@ -432,7 +439,7 @@ function resumeContentsInit(){
     const box3 = {
         w: 140,
         h: 80,
-        body: Matter.Bodies.rectangle(cw/2, 0, 200, 200),
+        body: Matter.Bodies.rectangle(cw/2-50, -100, 230, 230),
         elem: document.querySelector("#box-school"),
         render() {
           const {x, y} = this.body.position;
@@ -444,7 +451,7 @@ function resumeContentsInit(){
     const box4 = {
         w: 140,
         h: 80,
-        body: Matter.Bodies.circle(cw/2, 0, 100),
+        body: Matter.Bodies.rectangle(cw/2, 0, 230, 230),
         elem: document.querySelector("#box-contact"),
         render() {
           const {x, y} = this.body.position;
@@ -456,7 +463,7 @@ function resumeContentsInit(){
     const box5 = {
         w: 140,
         h: 80,
-        body: Matter.Bodies.circle(cw/2, 0, 100),
+        body: Matter.Bodies.circle(cw/2, -80, 125),
         elem: document.querySelector("#box-area"),
         render() {
           const {x, y} = this.body.position;
@@ -471,7 +478,7 @@ function resumeContentsInit(){
     })
     
     const ground = Matter.Bodies.rectangle(cw/2, ch, cw, 200, {isStatic : true});
-    const wallLeft = Matter.Bodies.rectangle(0, ch, 1, 3000, {isStatic : true});
+    const wallLeft = Matter.Bodies.rectangle(0-60, ch, 1, 3000, {isStatic : true});
     const wallRight = Matter.Bodies.rectangle(cw-60, ch, 1, 3000, {isStatic : true});
     
     box1.body.restitution = 1;
@@ -532,6 +539,7 @@ window.addEventListener('mousemove', (e)=>{
 
 const popups = document.querySelectorAll('.popup-wrapper');
 const popupDelete = document.querySelectorAll('.popup-delete');
+const popupTextWrapper = document.querySelectorAll('.popup-text-wrapper');
 
 popupDelete.forEach(btn => {
     btn.addEventListener('click', ()=>{
@@ -541,17 +549,21 @@ popupDelete.forEach(btn => {
     })
 })
 
+let popupIndex = 0;
+
 window.addEventListener('load',()=>{
     introSection.scrollIntoView({behavior:'smooth'})
-    popups.forEach(dom => {
+    popups.forEach((dom, index) => {
         setTimeout(()=>{
             dom.style.opacity = '1';
-        }, 500)
+            // popupTextWrapper[index].classList.add('popup-show')
+        }, 500 * ++popupIndex)
     })
 })
 
 popups.forEach((dom, index) => {
-
+    const color = Math.floor(Math.random() * colors.length)
+    dom.style.backgroundColor = colors[color]
 
 
     let isPress = false,   // 마우스를 눌렀을 때
@@ -562,12 +574,20 @@ popups.forEach((dom, index) => {
         move(dom, e)
     })
     dom.addEventListener('mousedown', (e)=>{
-        dom.style.zIndex = '100'
+        for(let i = 0 ; i < popups.length; i++){
+            if(i == index){
+                popups[i].style.zIndex = '100'
+            }else{
+                popups[i].style.zIndex = '0'
+            }
+        }
+        // dom.style.zIndex = '100'
+
         console.log(dom)
         start(dom, e)
     })
     dom.addEventListener('mouseup', (e)=>{
-        dom.style.zIndex = '0'
+        // dom.style.zIndex = '0'
         end(dom)
     })
     
@@ -599,6 +619,12 @@ popups.forEach((dom, index) => {
     }
 })
 
+setInterval(()=>{
+    popups.forEach(dom => {
+        const color = Math.floor(Math.random() * colors.length)
+        dom.style.backgroundColor = colors[color]
+    })
+}, 10000)
 
 // PART 2. RESUME & INTRODUCTION
 
@@ -619,35 +645,37 @@ resAndIntroSec.addEventListener('mousemove', (e)=>{
 
 
 resumeHeaderSection.addEventListener('click', async ()=>{
+    headerNotice.forEach((e) => {
+        e.style.opacity = '0'
+    })
     marker.style.display = 'none'
     resumeArrow.children[0].setAttribute('src', './src/img/buttons/rightBtn.png')
     sectionsWrapper.classList.remove('section-initial')
     sectionsWrapper.classList.add('section-resume')
     resumeArrow.style.opacity = '1'
-    // resumeHeaderSection.style.backgroundColor = resumeSectionColor
+    resumeHeaderSection.style.backgroundColor = 'white'
     resumeContentsInit();
 })
-resumeSection.addEventListener('mouseenter', ()=>{
-    // resumeHeaderSection.style.backgroundColor = resumeSectionColor
-    // resumeCategoryTitle.style.color = 'white'
-})
-resumeSection.addEventListener('mouseleave', ()=>{
-    resumeHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)'
-    // resumeCategoryTitle.style.color = 'initial'
-})
+
 resumeArrow.addEventListener('click', async ()=>{
+    headerNotice.forEach((e) => {
+        e.style.opacity = '1'
+    })
     if(sectionsWrapper.classList.contains('section-resume')){
         sectionsWrapper.classList.replace('section-resume', 'section-initial')
     }else if(sectionsWrapper.classList.contains('section-intro')){
         sectionsWrapper.classList.replace('section-intro', 'section-initial')
     }
-    marker.style.display = 'block'
+    // marker.style.display = 'block'
     // sectionsWrapper.classList.add('section-initial')
     resumeArrow.style.opacity = '0';
-    introHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)';
-    resumeHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)'
+    // introHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)';
+    // resumeHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)'
 })
 introductionSection.addEventListener('click', async ()=>{
+    headerNotice.forEach((e) => {
+        e.style.opacity = '0'
+    })
     marker.style.display = 'none'
     console.log(resumeArrow.children[0])
     resumeArrow.children[0].setAttribute('src', './src/img/buttons/leftBtn.png')
@@ -659,7 +687,23 @@ introductionSection.addEventListener('click', async ()=>{
     // introductionCategoryTitle.style.left = '0%'
     // introductionCategoryTitle.style.transform = 'none'
 })
+
+
+
+
+resumeSection.addEventListener('mouseenter', ()=>{
+    const color = Math.floor(Math.random()*colors.length)
+    resumeHeaderSection.style.backgroundColor = colors[color]
+    // resumeCategoryTitle.style.color = 'white'
+})
+resumeSection.addEventListener('mouseleave', ()=>{
+    resumeHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)'
+    // resumeCategoryTitle.style.color = 'initial'
+})
+
 introductionSection.addEventListener('mouseenter', ()=>{
+    const color = Math.floor(Math.random() * colors.length)
+    introHeaderSection.style.backgroundColor = colors[color]
     // introHeaderSection.style.backgroundColor = introductionSectionColor
     // introductionCategoryTitle.style.color = 'white'
 })
@@ -669,8 +713,10 @@ introductionSection.addEventListener('mouseleave', ()=>{
 })
 
 boxes.forEach((e) => {
+    
     e.addEventListener('mouseenter', ()=>{
         // resumeHeaderSection.style.backgroundColor = resumeSectionColor
+        e.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)]
         if(e.id == 'box-name'){
             resumeCategoryTitle.innerHTML = '신지웅 <br>Jiwoong Shinn'
         }else if(e.id == 'box-school'){
@@ -685,7 +731,7 @@ boxes.forEach((e) => {
     })
     e.addEventListener('mouseleave', ()=>{
         resumeCategoryTitle.innerHTML = '인적사항'
-        resumeHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)'
+        // resumeHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)'
         // resumeCategoryTitle.style.color = 'initial'
     })
 })
@@ -730,7 +776,7 @@ function appendVideo(project, index){
     videoEl.setAttribute('src', videoInfo.src);
     videoEl.setAttribute('loop', '');
     videoEl.setAttribute('autoplay', '');
-    videoEl.setAttribute('muted', '');
+    videoEl.muted = 'true'; 
     videoEl.classList.add('project-video')
     videoEl.style.width = videoInfo.width;
     videoEl.style.height = videoInfo.height;
@@ -752,8 +798,8 @@ function showProject(id){
             // 프로젝트 이전 정보 초기화
 
             if(projectList[i].themeColor){
-                portSec.style.setProperty('--port-bg-color', projectList[i].themeColor.bg);
-                portSec.style.setProperty('--port-contents-color', projectList[i].themeColor.contents);
+                portSec.style.setProperty('--port-bg-color', colors[Math.floor(Math.random()*colors.length)]);
+                portSec.style.setProperty('--port-contents-color', 'black');
             }else{
                 portSec.style.setProperty('--port-bg-color', 'rgb(255, 255, 255)');
                 portSec.style.setProperty('--port-contents-color', 'rgb(0, 0, 0)');
@@ -809,6 +855,12 @@ projects.forEach((dom, index) => {
         initProject(index);
     })
 
+    dom.addEventListener('mouseenter', ()=>{
+        dom.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)]
+    })
+    dom.addEventListener('mouseleave', ()=>{
+        dom.style.backgroundColor = 'white'
+    })
     
 
 })
@@ -902,34 +954,35 @@ projectYearFilters.forEach((filter, index) => {
 
 // INTRODUCTION
 
-introContentsTitles.forEach((title, index) => {
-    title.addEventListener('mouseenter', ()=>{
+introContentsTitles.forEach((wrapper, index) => {
+    const title = wrapper.children[0]
+    wrapper.addEventListener('mouseenter', ()=>{
         introductionBG.style.display = 'block'
         
         if(title.id == 'grow'){
             introductionBG.style.animation = 'growAnimation 1.5s cubic-bezier(.75,0,.3,1)  infinite'
-            introductionBG.style.backgroundColor = 'rgb(204, 255, 0)'
+            introductionBG.style.backgroundColor = '#01956e'
         }else if(title.id == 'expand'){
             introductionBG.style.animation = 'expandAnimation 1.5s cubic-bezier(.75,0,.3,1)  infinite'
-            introductionBG.style.backgroundColor = 'rgb(204, 51, 51)'
+            introductionBG.style.backgroundColor = '#99b5fb'
         }else{
             introductionBG.style.animation = 'createAnimation 2s cubic-bezier(.75,0,.3,1)  infinite alternate'
-            introductionBG.style.backgroundColor = 'rgb(51, 204, 51)'
+            introductionBG.style.backgroundColor = '#eda488'
         }
     })
 
-    title.addEventListener('mouseleave', ()=>{
+    wrapper.addEventListener('mouseleave', ()=>{
         introductionBG.style.animation = 'none'
         introductionBG.style.display = 'none'
     })
 
-    title.addEventListener('click', ()=>{
-        let wrapper = title.parentElement.parentElement;
+    wrapper.addEventListener('click', ()=>{
+        let wrapperParent = wrapper.parentElement;
         
 
         detailBtn[index].classList.toggle('detailBtnRotate');
         title.classList.toggle('introduction-contents-title-selected');
-        wrapper.classList.toggle('introduction-text-show');
+        wrapperParent.classList.toggle('introduction-text-show');
     })
 })
 
