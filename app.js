@@ -683,7 +683,6 @@ folders.forEach((dom, index) => {
         start(dom, e)
     })
     dom.addEventListener('mouseup', (e)=>{
-        // dom.style.zIndex = '0'
         end(dom)
     })
 
