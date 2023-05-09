@@ -246,6 +246,10 @@ const picit = {
     }],
     'index' : 'Website Development, 2022',
     'description' : 'PICIT!은 영단어 학습을 도와주는 웹사이트입니다. <br>사용자가 웹사이트에 영어 원서 이미지를 업로드하면, 문서 내의 유의미한 영단어를 찾아 뜻하는 바를 보여주고, 사용자가 모르는 단어를 골라서 이메일로 공유할 수 있게 구현하였습니다. <br>광학 문자인식 기술 (Optical Character Recognition, OCR)과 자연어처리 기술 (Natural Language Processing, NLP) 및 웹 크롤링 기술을 결합하여 구현하였습니다. <br><br>*서울과학기술대학교의 졸업작품으로 제출하였습니다.',
+    'link' : {
+        'src' : 'https://github.com/shinnjiwoong/PicIt.com',
+        'name' : '더 알아보기'
+    },
     'themeColor' : {
         'bg' : 'black',
         'contents' : 'black'
@@ -518,13 +522,17 @@ let screens = [introSection, resAndIntroSec, portSec]
 let index = 0;
 
 headerUp.addEventListener('click', ()=>{
-    // index++;
     
     if(index-- <= 0){
         index = 0;
     }
+    if(sectionsWrapper.classList.contains('section-resume')){
+        sectionsWrapper.classList.replace('section-resume', 'section-initial')
+    }else if(sectionsWrapper.classList.contains('section-intro')){
+        sectionsWrapper.classList.replace('section-intro', 'section-initial')
+    }
+    resumeArrow.style.opacity = '0';
     screens[index].scrollIntoView({behavior:"smooth"})
-    // introSection.scrollIntoView({behavior:"smooth"})
 })
 
 headerDown.addEventListener('click', ()=>{
@@ -532,6 +540,12 @@ headerDown.addEventListener('click', ()=>{
     if(index++ >= screens.length-1){
         index = screens.length-1
     }
+    if(sectionsWrapper.classList.contains('section-resume')){
+        sectionsWrapper.classList.replace('section-resume', 'section-initial')
+    }else if(sectionsWrapper.classList.contains('section-intro')){
+        sectionsWrapper.classList.replace('section-intro', 'section-initial')
+    }
+    resumeArrow.style.opacity = '0';
     screens[index].scrollIntoView({behavior:"smooth"})
 })
 window.addEventListener('mousemove', (e)=>{
@@ -567,7 +581,11 @@ window.addEventListener('load',()=>{
 popups.forEach((dom, index) => {
     const color = Math.floor(Math.random() * colors.length)
     // dom.style.backgroundColor = colors[color]
+    const randX = (Math.random() * 60) + 10
+    const randY = (Math.random() * 60) + 10
 
+    dom.style.top = `${randY}%`
+    dom.style.left = `${randX}%`
 
     let isPress = false,   // 마우스를 눌렀을 때
     prevPosX = 0,      // 이전에 위치한 X값
@@ -626,8 +644,8 @@ popups.forEach((dom, index) => {
 folders.forEach((dom, index) => {
     const color = Math.floor(Math.random() * colors.length)
     // dom.style.backgroundColor = colors[color]
-    const randX = Math.random() * 80
-    const randY = Math.random() * 80
+    const randX = (Math.random() * 60) + 10
+    const randY = (Math.random() * 60) + 10
 
     dom.style.top = `${randY}%`
     dom.style.left = `${randX}%`
@@ -671,7 +689,7 @@ folders.forEach((dom, index) => {
 
     let folderIndex = 'closed'
 
-    dom.addEventListener('dblclick', (e)=>{
+    dom.addEventListener('click', (e)=>{
         if(folderIndex == 'closed'){
             e.target.children[0].setAttribute('src', 'src/img/buttons/folder_open.png')
             folderIndex = 'opened'
@@ -709,12 +727,6 @@ folders.forEach((dom, index) => {
         isPress = false;
     }
 })
-// setInterval(()=>{
-//     popups.forEach(dom => {
-//         const color = Math.floor(Math.random() * colors.length)
-//         dom.style.backgroundColor = colors[color]
-//     })
-// }, 10000)
 
 // PART 2. RESUME & INTRODUCTION
 
@@ -757,10 +769,7 @@ resumeArrow.addEventListener('click', async ()=>{
         sectionsWrapper.classList.replace('section-intro', 'section-initial')
     }
     marker.style.display = 'block'
-    // sectionsWrapper.classList.add('section-initial')
     resumeArrow.style.opacity = '0';
-    // introHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)';
-    // resumeHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)'
 })
 introductionSection.addEventListener('click', async ()=>{
     headerNotice.forEach((e) => {
@@ -773,9 +782,6 @@ introductionSection.addEventListener('click', async ()=>{
     sectionsWrapper.classList.add('section-intro')
     resumeArrow.style.opacity = '1'
     introHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)';
-    // introductionCategoryTitle.style.top = '0%'
-    // introductionCategoryTitle.style.left = '0%'
-    // introductionCategoryTitle.style.transform = 'none'
 })
 
 
@@ -784,28 +790,22 @@ introductionSection.addEventListener('click', async ()=>{
 resumeSection.addEventListener('mouseenter', ()=>{
     const color = Math.floor(Math.random()*colors.length)
     resumeHeaderSection.style.backgroundColor = colors[color]
-    // resumeCategoryTitle.style.color = 'white'
 })
 resumeSection.addEventListener('mouseleave', ()=>{
     resumeHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)'
-    // resumeCategoryTitle.style.color = 'initial'
 })
 
 introductionSection.addEventListener('mouseenter', ()=>{
     const color = Math.floor(Math.random() * colors.length)
     introHeaderSection.style.backgroundColor = colors[color]
-    // introHeaderSection.style.backgroundColor = introductionSectionColor
-    // introductionCategoryTitle.style.color = 'white'
 })
 introductionSection.addEventListener('mouseleave', ()=>{
     introHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)'
-    // introductionCategoryTitle.style.color = 'initial'
 })
 
 boxes.forEach((e) => {
     
     e.addEventListener('mouseenter', ()=>{
-        // resumeHeaderSection.style.backgroundColor = resumeSectionColor
         e.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)]
         if(e.id == 'box-name'){
             resumeCategoryTitle.innerHTML = '신지웅 <br>Jiwoong Shinn'
@@ -821,8 +821,6 @@ boxes.forEach((e) => {
     })
     e.addEventListener('mouseleave', ()=>{
         resumeCategoryTitle.innerHTML = '인적사항'
-        // resumeHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)'
-        // resumeCategoryTitle.style.color = 'initial'
     })
 })
 
@@ -962,10 +960,6 @@ projects.forEach((dom, index) => {
         tagBox.appendChild(tag)
     }
 
-    // projectPos(dom)
-
-    // portfolioContentsWrapper.onmousemove = move;
-
     dom.addEventListener('click', ()=>{
         dropSentence.style.opacity = '0';
         projectDescInfoWrapper.classList.remove('project-desc-show')
@@ -975,15 +969,6 @@ projects.forEach((dom, index) => {
         showProject(child.id);
         initProject(index);
     })
-
-    // dom.addEventListener('mouseenter', ()=>{
-    //     // dom.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)]
-    //     dom.style.backgroundColor = 'white'
-    // })
-    // dom.addEventListener('mouseleave', ()=>{
-    //     dom.style.backgroundColor = 'rgb(150, 150, 150)'
-    // })
-    
 
 })
 
@@ -1023,15 +1008,6 @@ projectFilters.forEach(filter => {
     filter.addEventListener('click', (e)=>{
         const id = e.target.id;
         const indexTarget = id.substr(8);
-        // let length = projectFilters.length;
-
-        // for(let i = 0; i < length; i++){
-        //     if(projectFilters[i].id == id){
-        //         projectFilters[i].classList.add('filter-selected')
-        //     }else{
-        //         projectFilters[i].classList.remove('filter-selected')
-        //     }
-        // }
 
         scopeFilter = indexTarget;
 
@@ -1039,15 +1015,6 @@ projectFilters.forEach(filter => {
 
         filterOut(scopeFilter, yearFilter)
 
-        // projects.forEach(p => {
-        //     const projectTarget = p.children[0]
-
-        //     if(projectTarget.classList.contains(indexTarget)){
-        //         p.classList.remove('project-hide')
-        //     }else{
-        //         p.classList.add('project-hide')
-        //     }
-        // })
     })
 })
 
@@ -1062,15 +1029,6 @@ projectYearFilters.forEach((filter, index) => {
 
         filterOut(scopeFilter, yearFilter);
 
-        // projects.forEach(p => {
-        //     const projectTarget = p.children[0]
-
-        //     if(projectTarget.classList.contains(indexTarget)){
-        //         p.classList.remove('project-hide')
-        //     }else{
-        //         p.classList.add('project-hide')
-        //     }
-        // })
     })
 })
 
@@ -1079,20 +1037,6 @@ projectYearFilters.forEach((filter, index) => {
 introContentsTitles.forEach((wrapper, index) => {
     const box = wrapper.children[0]
     const title = wrapper.children[1]
-    wrapper.addEventListener('mouseenter', ()=>{
-        // introductionBG.style.display = 'block'
-        
-        // if(title.id == 'grow'){
-        //     introductionBG.style.animation = 'growAnimation 1.5s cubic-bezier(.75,0,.3,1)  infinite'
-        //     introductionBG.style.backgroundColor = '#01956e'
-        // }else if(title.id == 'expand'){
-        //     introductionBG.style.animation = 'expandAnimation 1.5s cubic-bezier(.75,0,.3,1)  infinite'
-        //     introductionBG.style.backgroundColor = '#99b5fb'
-        // }else{
-        //     introductionBG.style.animation = 'createAnimation 2s cubic-bezier(.75,0,.3,1)  infinite alternate'
-        //     introductionBG.style.backgroundColor = '#eda488'
-        // }
-    })
 
     wrapper.addEventListener('mouseleave', ()=>{
         introductionBG.style.animation = 'none'
@@ -1166,6 +1110,4 @@ const showDialogue = async (dialogue) => {
     }, pause*(dialogue.length + 1))
 
 }
-
-// showDialogue(chatbotText1)
 

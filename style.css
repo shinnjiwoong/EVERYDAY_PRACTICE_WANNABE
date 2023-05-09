@@ -342,7 +342,7 @@ font-style: normal; */
     /* background-color: var(--contents-color-yellow); */
     top: 60%;
     right: 20%;
-    width: 70%;
+    width: 50%;
     /* height: 40%; */
   }
 
@@ -379,7 +379,7 @@ font-style: normal; */
 
   .popup-delete-box:hover{
     /* background-color: crimson; */
-    background-color: rgb(255, 0, 230);
+    background-color: rgb(255, 255, 0);
   }
 
   .popup-mini-box{
@@ -451,7 +451,7 @@ font-style: normal; */
     /* background-color: rgb(230, 230, 230); */
   }
   .popup-wrapper:hover .popup-delete-box{
-    background-color: rgb(255, 0, 230);
+    background-color: rgb(255, 255, 0);
   }
 
   .popup-show{
@@ -1010,7 +1010,7 @@ font-style: normal; */
   font-size: var(--font-semi-small);
   font-weight: 300;
   line-height: 30px;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
   word-break: keep-all;
   height: 100%;
   overflow-y: scroll;
