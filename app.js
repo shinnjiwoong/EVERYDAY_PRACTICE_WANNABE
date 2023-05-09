@@ -40,7 +40,7 @@ const altGal = {
         'name' : '들어보기'
     },
     'themeColor' : {
-        'bg' : '#07C4D9',
+        'bg' : 'white',
         'contents' : 'black'
         }
 }
@@ -73,7 +73,7 @@ const kang = {
     'index' : 'Soundtrack, 2023',
     'description' : "<옆복도 괴물군>은 김동연 감독의 2023년 단편 영화입니다. <br>학교에 서식하는 괴물 '캉', 그리고 그것과 친구가 되려는 괴물 연구 동아리장 '승찬'과 학교 경비원 사이에서 벌어지는 이야기를 담은 작품입니다. <br>저는 이 작품의 사운드트랙을 작업하여, 영화가 주는 엉뚱하고 몽환적인 분위기를 재즈 장르를 기반으로 한 음악으로 표현했습니다.",
     'themeColor' : {
-        'bg' : '#021F59',
+        'bg' : 'black',
         'contents' : 'white'
         }
 }
@@ -132,7 +132,7 @@ const underfoot = {
         'name' : 'www.underfoot.place'
     },
     'themeColor' : {
-        'bg' : 'rgb(0, 10, 255)',
+        'bg' : 'black',
         'contents' : 'rgb(255, 255, 255)'
         }
 }
@@ -152,7 +152,7 @@ const casper = {
         'height' : `${albumSizeHeight}px`
     }],
     'video' : [{
-        'src' : 'src/project_vid/KASINAxCASPER.mp4',
+        'src' : 'src/project_vid/kasina_casper.mp4',
         'width' : `${videoWidth}px`,
         'height' : `${videoHeight}px`
     }],
@@ -163,7 +163,7 @@ const casper = {
         'name' : 'Instagram'
     },
     'themeColor' : {
-        'bg' : '#F2F2F2',
+        'bg' : 'white',
         'contents' : 'black'
         }
 }
@@ -222,7 +222,7 @@ const sjw = {
         'name' : 'www.shinnjiwoong.com'
     },
     'themeColor' : {
-        'bg' : 'rgb(185, 185, 185)',
+        'bg' : 'white',
         'contents' : 'rgb(0, 0, 0)'
         }
 }
@@ -247,7 +247,7 @@ const picit = {
     'index' : 'Website Development, 2022',
     'description' : 'PICIT!은 영단어 학습을 도와주는 웹사이트입니다. <br>사용자가 웹사이트에 영어 원서 이미지를 업로드하면, 문서 내의 유의미한 영단어를 찾아 뜻하는 바를 보여주고, 사용자가 모르는 단어를 골라서 이메일로 공유할 수 있게 구현하였습니다. <br>광학 문자인식 기술 (Optical Character Recognition, OCR)과 자연어처리 기술 (Natural Language Processing, NLP) 및 웹 크롤링 기술을 결합하여 구현하였습니다. <br><br>*서울과학기술대학교의 졸업작품으로 제출하였습니다.',
     'themeColor' : {
-        'bg' : '#05F228',
+        'bg' : 'black',
         'contents' : 'black'
         }
 }
@@ -273,7 +273,7 @@ const umm1 = {
         'name' : '들어보기'
     },
     'themeColor' : {
-        'bg' : '#F2E399',
+        'bg' : 'white',
         'contents' : 'black'
         }
 }
@@ -331,7 +331,7 @@ const kaffe = {
     'index' : '1 Song, 2022',
     'description' : "KASINA Kaffe는 신사동에 위치한 카시나의 카페테리아 브랜드입니다. <br>새로운 오픈을 맞이한 이벤트의 커머셜 음악을 작업하여 카페가 추구하는 세련되면서도 따듯한 이미지를 음악적으로 구현하고자 하였습니다.",
     'themeColor' : {
-        'bg' : '#F2AEAE',
+        'bg' : 'white',
         'contents' : 'black'
         }
 }
@@ -367,6 +367,7 @@ const introductionCategoryTitle = document.getElementById('introduction-title')
 // const resumeDescWrapper = document.getElementById('resume-desc-wrapper')
 
 const introContentsTitles = document.querySelectorAll('.introduction-title-wrapper');
+const introTextWrapper = document.querySelectorAll('.introduction-text-wrapper');
 const introductionBG = document.getElementById('introduction-header-bg')
 const detailBtn = document.querySelectorAll('.introduction-detail-btn-wrapper')
 const headerNotice = document.querySelectorAll('.header-notice-btn');
@@ -391,6 +392,8 @@ const projectIndex = document.getElementById('project-index');
 const projectTitle = document.getElementById('project-desc-title');
 const projectLink = document.getElementById('project-link')
 
+const folders = document.querySelectorAll('.folder-wrapper');
+
 
 const projectDescMediaWrapper = document.getElementById('project-desc-media-wrapper');
 
@@ -398,7 +401,7 @@ const projectDescMediaWrapper = document.getElementById('project-desc-media-wrap
 const projectSlidingWrapperDom = projectSlidingWrapper.getBoundingClientRect();
 const projectDescRect = projectDescWrapper.getBoundingClientRect();
 
-const colors = ['#01956e', '#99b5fb', '#ffed3b', '#eda488', '#0047f5', '#54c2cc', '#b0dce0', '#fe601e', '#b9a800', '#d8b5a8', '#FEC8DF', '#07A3FF', '#F5FF03', '#DBFFFF', '#F5DC11'];
+const colors = ['rgb(0, 208, 255)', 'yellow', 'rgb(255, 0, 230)', 'rgb(135, 246, 49)'];
 
 // Matter Js & Canvas
 
@@ -415,7 +418,7 @@ function resumeContentsInit(){
     const box1 = {
         w: 140,
         h: 80,
-        body: Matter.Bodies.circle(cw/2-100, -10, 125),
+        body: Matter.Bodies.circle(cw/2-100, -10, 100),
         elem: document.querySelector("#box-name"),
         render() {
           const {x, y} = this.body.position;
@@ -563,7 +566,7 @@ window.addEventListener('load',()=>{
 
 popups.forEach((dom, index) => {
     const color = Math.floor(Math.random() * colors.length)
-    dom.style.backgroundColor = colors[color]
+    // dom.style.backgroundColor = colors[color]
 
 
     let isPress = false,   // 마우스를 눌렀을 때
@@ -619,12 +622,99 @@ popups.forEach((dom, index) => {
     }
 })
 
-setInterval(()=>{
-    popups.forEach(dom => {
-        const color = Math.floor(Math.random() * colors.length)
-        dom.style.backgroundColor = colors[color]
+
+folders.forEach((dom, index) => {
+    const color = Math.floor(Math.random() * colors.length)
+    // dom.style.backgroundColor = colors[color]
+    const randX = Math.random() * 80
+    const randY = Math.random() * 80
+
+    dom.style.top = `${randY}%`
+    dom.style.left = `${randX}%`
+
+    let isPress = false,   // 마우스를 눌렀을 때
+    prevPosX = 0,      // 이전에 위치한 X값
+    prevPosY = 0;      // 이전에 위치한 Y값
+
+    introSection.addEventListener('mousemove', (e)=>{
+        move(dom, e)
     })
-}, 10000)
+
+    introSection.addEventListener('click', (e)=>{
+        
+        for(let i = 0 ; i < folders.length; i++){
+            folders[i].style.backgroundColor = 'white'
+        }
+    })
+
+    dom.addEventListener('mousedown', (e)=>{
+        for(let i = 0 ; i < folders.length; i++){
+            if(i == index){
+                folders[i].style.zIndex = '100'
+                folders[i].style.backgroundColor = 'rgb(255, 0, 230)'
+                // folders[i].children[1].style.backgroundColor ='rgb(255, 0, 230)'
+            }else{
+                folders[i].style.zIndex = '0'
+                folders[i].style.backgroundColor = 'white'
+                // folders[i].children[1].style.backgroundColor ='initial'
+            }
+        }
+        
+
+        console.log(dom)
+        start(dom, e)
+    })
+    dom.addEventListener('mouseup', (e)=>{
+        // dom.style.zIndex = '0'
+        end(dom)
+    })
+
+    let folderIndex = 'closed'
+
+    dom.addEventListener('dblclick', (e)=>{
+        if(folderIndex == 'closed'){
+            e.target.children[0].setAttribute('src', 'src/img/buttons/folder_open.png')
+            folderIndex = 'opened'
+        }else{
+            e.target.children[0].setAttribute('src', 'src/img/buttons/folder.png')
+            folderIndex = 'closed'
+        }
+        
+    })
+    
+    function start(dom, e) {
+        prevPosX = e.clientX;
+        prevPosY = e.clientY;
+
+        isPress = true;
+    }
+    // mousemove
+    function move(dom,e) {
+        if (!isPress) {
+          return;
+        }
+        // 이전 좌표와 현재 좌표 차이값
+        const posX = prevPosX - e.clientX; 
+        const posY = prevPosY - e.clientY; 
+        // 현재 좌표가 이전 좌표로 바뀜
+        prevPosX = e.clientX; 
+        prevPosY = e.clientY; 
+        // left, top으로 이동
+        dom.style.left = (dom.offsetLeft - posX) + "px";
+        dom.style.top = (dom.offsetTop - posY) + "px";
+    }
+    // mouseup
+    function end(dom) {
+        
+        isPress = false;
+    }
+})
+// setInterval(()=>{
+//     popups.forEach(dom => {
+//         const color = Math.floor(Math.random() * colors.length)
+//         dom.style.backgroundColor = colors[color]
+//     })
+// }, 10000)
 
 // PART 2. RESUME & INTRODUCTION
 
@@ -666,7 +756,7 @@ resumeArrow.addEventListener('click', async ()=>{
     }else if(sectionsWrapper.classList.contains('section-intro')){
         sectionsWrapper.classList.replace('section-intro', 'section-initial')
     }
-    // marker.style.display = 'block'
+    marker.style.display = 'block'
     // sectionsWrapper.classList.add('section-initial')
     resumeArrow.style.opacity = '0';
     // introHeaderSection.style.backgroundColor = 'rgb(255, 255, 255)';
@@ -720,7 +810,7 @@ boxes.forEach((e) => {
         if(e.id == 'box-name'){
             resumeCategoryTitle.innerHTML = '신지웅 <br>Jiwoong Shinn'
         }else if(e.id == 'box-school'){
-            resumeCategoryTitle.innerHTML = '서울과학기술대학교 컴퓨터공학과 학사 <br>(2023.01 졸업)'
+            resumeCategoryTitle.innerHTML = '서울과학기술대학교 컴퓨터공학과 학사 <br>(2023.02 졸업)'
         }else if(e.id == 'box-contact'){
             resumeCategoryTitle.innerHTML = 'email. shinnjiwoong@gmail.com <br>tel. 010.8980.5434'
         }else if(e.id == 'box-birthday'){
@@ -798,7 +888,7 @@ function showProject(id){
             // 프로젝트 이전 정보 초기화
 
             if(projectList[i].themeColor){
-                portSec.style.setProperty('--port-bg-color', colors[Math.floor(Math.random()*colors.length)]);
+                portSec.style.setProperty('--port-bg-color', projectList[i].themeColor.bg);
                 portSec.style.setProperty('--port-contents-color', 'black');
             }else{
                 portSec.style.setProperty('--port-bg-color', 'rgb(255, 255, 255)');
@@ -835,11 +925,42 @@ function showProject(id){
     
 }
 
+
 projects.forEach((dom, index) => {
-    let child = dom.children[0]
+    let child = dom.children[0].children[0]
     const detailBtn = dom.querySelector('.project-detail-btn')
+    const tagWrapper = dom.querySelector('.project-title-tag-wrapper');
+    const tagBox = tagWrapper.children[1];
+    const classes = dom.children[0].children[0].classList;
 
-
+    if(classes.contains('music')){
+        let tag = document.createElement('div');
+        let detail = dom.querySelector('.project-detail-btn')
+        tag.classList.add('project-tag');
+        tag.style.backgroundColor = 'yellow'
+        tagBox.appendChild(tag)
+    }
+    if(classes.contains('web')){
+        let tag = document.createElement('div');
+        let detail = dom.querySelector('.project-detail-btn')
+        tag.classList.add('project-tag');
+        tag.style.backgroundColor = 'rgb(0, 208, 255)'
+        tagBox.appendChild(tag)
+    }
+    if(classes.contains('mix')){
+        let tag = document.createElement('div');
+        let detail = dom.querySelector('.project-detail-btn')
+        tag.classList.add('project-tag');
+        tag.style.backgroundColor = 'rgb(255, 0, 230)'
+        tagBox.appendChild(tag)
+    }
+    if(classes.contains('graphic')){
+        let tag = document.createElement('div');
+        let detail = dom.querySelector('.project-detail-btn')
+        tag.classList.add('project-tag');
+        tag.style.backgroundColor = 'rgb(135, 246, 49)'
+        tagBox.appendChild(tag)
+    }
 
     // projectPos(dom)
 
@@ -855,12 +976,13 @@ projects.forEach((dom, index) => {
         initProject(index);
     })
 
-    dom.addEventListener('mouseenter', ()=>{
-        dom.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)]
-    })
-    dom.addEventListener('mouseleave', ()=>{
-        dom.style.backgroundColor = 'white'
-    })
+    // dom.addEventListener('mouseenter', ()=>{
+    //     // dom.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)]
+    //     dom.style.backgroundColor = 'white'
+    // })
+    // dom.addEventListener('mouseleave', ()=>{
+    //     dom.style.backgroundColor = 'rgb(150, 150, 150)'
+    // })
     
 
 })
@@ -884,7 +1006,7 @@ function selectFilter(arr, id){
 
 function filterOut(scope, year){
     projects.forEach(p => {
-        const projectTarget = p.children[0]
+        const projectTarget = p.children[0].children[0]
 
         if(projectTarget.classList.contains(scope) && projectTarget.classList.contains(year)){
             p.classList.remove('project-hide')
@@ -955,20 +1077,21 @@ projectYearFilters.forEach((filter, index) => {
 // INTRODUCTION
 
 introContentsTitles.forEach((wrapper, index) => {
-    const title = wrapper.children[0]
+    const box = wrapper.children[0]
+    const title = wrapper.children[1]
     wrapper.addEventListener('mouseenter', ()=>{
-        introductionBG.style.display = 'block'
+        // introductionBG.style.display = 'block'
         
-        if(title.id == 'grow'){
-            introductionBG.style.animation = 'growAnimation 1.5s cubic-bezier(.75,0,.3,1)  infinite'
-            introductionBG.style.backgroundColor = '#01956e'
-        }else if(title.id == 'expand'){
-            introductionBG.style.animation = 'expandAnimation 1.5s cubic-bezier(.75,0,.3,1)  infinite'
-            introductionBG.style.backgroundColor = '#99b5fb'
-        }else{
-            introductionBG.style.animation = 'createAnimation 2s cubic-bezier(.75,0,.3,1)  infinite alternate'
-            introductionBG.style.backgroundColor = '#eda488'
-        }
+        // if(title.id == 'grow'){
+        //     introductionBG.style.animation = 'growAnimation 1.5s cubic-bezier(.75,0,.3,1)  infinite'
+        //     introductionBG.style.backgroundColor = '#01956e'
+        // }else if(title.id == 'expand'){
+        //     introductionBG.style.animation = 'expandAnimation 1.5s cubic-bezier(.75,0,.3,1)  infinite'
+        //     introductionBG.style.backgroundColor = '#99b5fb'
+        // }else{
+        //     introductionBG.style.animation = 'createAnimation 2s cubic-bezier(.75,0,.3,1)  infinite alternate'
+        //     introductionBG.style.backgroundColor = '#eda488'
+        // }
     })
 
     wrapper.addEventListener('mouseleave', ()=>{
@@ -981,8 +1104,9 @@ introContentsTitles.forEach((wrapper, index) => {
         
 
         detailBtn[index].classList.toggle('detailBtnRotate');
+        box.classList.toggle('introduction-contents-title-box-selected');
         title.classList.toggle('introduction-contents-title-selected');
-        wrapperParent.classList.toggle('introduction-text-show');
+        wrapperParent.children[1].classList.toggle('introduction-text-show');
     })
 })
 
