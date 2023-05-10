@@ -93,7 +93,7 @@ const reservoir = {
     }],
     'video' : null,
     'index' : 'Mixset, Cover Design, 2022',
-    'description' : "Reservoir Dogs 믹스셋은 홍대에 위치한 주점 '저수지'의 오프닝 행사를 위해 제작한 믹스셋입니다. <br>'저수지'는 '낚시'라는 테마를 가지고 있습니다. <br>'낚시'라는 키워드에 착안하여 텍스트가 낚시줄에 걸려있는 이미지 구현하고 아트워크를 제작하였습니다.",
+    'description' : "Reservoir Dogs 믹스셋은 홍대에 위치한 주점 '저수지'의 오프닝 행사를 위해 제작한 믹스셋입니다. <br>'저수지'는 '낚시'라는 테마를 가지고 있습니다. <br>'낚시'라는 키워드에 착안하여 텍스트가 낚시줄에 걸려있는 이미지를 구현하고 아트워크를 제작하였습니다.",
     'link' : {
         'src' : 'https://soundcloud.com/montikayoti/reservoir_dogs_mixmp3?in=montikayoti/sets/mix&si=38d19a321fc0423890940e1e057de37c&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
         'name' : '들어보기'
