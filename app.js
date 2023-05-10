@@ -93,7 +93,7 @@ const reservoir = {
     }],
     'video' : null,
     'index' : 'Mixset, Cover Design, 2022',
-    'description' : "Reservoir Dogs 믹스셋은 홍대에 위치한 주점 '저수지'의 오프닝 행사를 위해 제작한 믹스셋입니다. <br>'저수지'는 '낚시'라는 테마를 가지고 있습니다. <br>믹스셋은 부드러우면서도 리듬감을 느낄 수 있는 곡들을 선별하여 행사에 맞는 분위기를 연출하였고, '낚시'라는 키워드에 중점을 두어 커버 아트워크를 디자인했습니다.",
+    'description' : "Reservoir Dogs 믹스셋은 홍대에 위치한 주점 '저수지'의 오프닝 행사를 위해 제작한 믹스셋입니다. <br>'저수지'는 '낚시'라는 테마를 가지고 있습니다. <br>'낚시'라는 키워드에 착안하여 텍스트가 낚시줄에 걸려있는 이미지 구현하고 아트워크를 제작하였습니다.",
     'link' : {
         'src' : 'https://soundcloud.com/montikayoti/reservoir_dogs_mixmp3?in=montikayoti/sets/mix&si=38d19a321fc0423890940e1e057de37c&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
         'name' : '들어보기'
@@ -126,7 +126,7 @@ const underfoot = {
         'height' : `${videoHeight}px`
     }],
     'index' : 'Website Development, Logo Design, 2023',
-    'description' : "UNDERFOOT은 서울을 기반으로 활동하는 예술인 집단입니다. <br>'우리의 발 아래에 있는 -'이란 뜻의 Underfoot은 음지에 존재하는 다양한 문화들을 상징합니다.<br>'발 밑에 존재한다'는 데에서 착안하여, 웹사이트에 하강 스크롤링을 기반으로 한 애니메이션을 구현하고, 로고 디자인에서 또한 내려다보는 느낌을 표현했습니다.",
+    'description' : "UNDERFOOT은 서울을 기반으로 활동하는 예술인 집단입니다. <br>'우리의 발 아래에 있는 -'이란 뜻의 Underfoot은 음지에 존재하는 다양한 문화들을 상징합니다.<br>'발 밑에 존재한다'는 데에서 착안하여 웹사이트의 전체적인 흐름을 '하강'에 집중하여 구성했고, 이에 따라서, 위아래로 스크롤링 할 때의 인터렉션을 구현하였습니다. <br>로고 디자인은 단순한 타이포그래픽에서 아래를 내려다보는 그래픽 요소를 추가하여 컨셉에 맞는 일체감을 만들고자 했습니다.",
     'link' : {
         'src' : 'https://www.underfoot.place/',
         'name' : 'www.underfoot.place'
@@ -216,7 +216,7 @@ const sjw = {
         'height' : `${videoHeight}px`
     }],
     'index' : 'Website Development, 2023',
-    'description' : '2019년부터 2023년까지 작업했던 모든 프로젝트들을 모아둔 포트폴리오 웹사이트입니다. <br>화면을 4개의 구역으로 나누어서 다양한 분야에서의 작업물들을 동시다발적으로 표현했습니다. <br>클릭할 때마다 무작위로 변하는 색감과 직접 제작한 음악을 재생함으로서 웹사이트를 둘러보는 동안의 재미를 더했습니다.',
+    'description' : "2019년부터 2023년까지 작업했던 모든 프로젝트들을 모아둔 포트폴리오 웹사이트입니다. <br>'명함'에서 디자인 아이디어를 얻어서 웹 화면을 4분할하여 4개의 명함처럼 보이도록 구성하였습니다. <br>각각의 영역은 서로 다른 컨텐츠를 보여주고, 이를 한눈에 볼 수 있도록 배치하였습니다. <br>클릭할 때마다 무작위로 변하는 색감과 직접 제작한 음악을 재생함으로서 웹사이트를 둘러보는 동안의 재미를 더했습니다.",
     'link' : {
         'src' : 'https://www.shinnjiwoong.com/',
         'name' : 'www.shinnjiwoong.com'
@@ -271,7 +271,7 @@ const umm1 = {
         'height' : `${albumSizeHeight}px`
     }],
     'index' : 'Mixset, Cover Design, 2022',
-    'description' : "꽃내음 Vol.1은 '봄'을 떠올릴 수 있는 음악들을 선별하여 제작한 믹스셋입니다. <br>봄이라는 계절감이 주는 부드러우면서 향기로운 분위기를 표현할 수 있는 색감과 바이닐의 디자인 형식을 결합하여 시각적으로 표현했습니다.",
+    'description' : "꽃내음 Vol.1은 '봄'을 떠올릴 수 있는 음악들을 선별하여 제작한 믹스셋입니다. <br>'몽환적', '따듯함', 그리고 '꽃'이라는 키워드를 가지고 색감을 정하고 그래픽 요소를 제작하였고, 믹스셋이라는 특성을 살려 바이닐 그래픽을 적용시켜 아트워크를 제작하였습니다.",
     'link' : {
         'src' : 'https://soundcloud.com/montikayoti/umm-vol1?in=montikayoti/sets/mix&si=e4814702263c4469aed3a674c49e4903&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
         'name' : '들어보기'
@@ -531,6 +531,10 @@ headerUp.addEventListener('click', ()=>{
     }else if(sectionsWrapper.classList.contains('section-intro')){
         sectionsWrapper.classList.replace('section-intro', 'section-initial')
     }
+    headerNotice.forEach((e) => {
+        e.style.opacity = '1'
+    })
+    marker.style.display = 'block'
     resumeArrow.style.opacity = '0';
     screens[index].scrollIntoView({behavior:"smooth"})
 })
@@ -545,6 +549,10 @@ headerDown.addEventListener('click', ()=>{
     }else if(sectionsWrapper.classList.contains('section-intro')){
         sectionsWrapper.classList.replace('section-intro', 'section-initial')
     }
+    headerNotice.forEach((e) => {
+        e.style.opacity = '1'
+    })
+    marker.style.display = 'block'
     resumeArrow.style.opacity = '0';
     screens[index].scrollIntoView({behavior:"smooth"})
 })
@@ -581,8 +589,8 @@ window.addEventListener('load',()=>{
 popups.forEach((dom, index) => {
     const color = Math.floor(Math.random() * colors.length)
     // dom.style.backgroundColor = colors[color]
-    const randX = (Math.random() * 60) + 10
-    const randY = (Math.random() * 60) + 10
+    const randX = (Math.random() * 50) + 10
+    const randY = (Math.random() * 50) + 10
 
     dom.style.top = `${randY}%`
     dom.style.left = `${randX}%`
@@ -644,8 +652,8 @@ popups.forEach((dom, index) => {
 folders.forEach((dom, index) => {
     const color = Math.floor(Math.random() * colors.length)
     // dom.style.backgroundColor = colors[color]
-    const randX = (Math.random() * 60) + 10
-    const randY = (Math.random() * 60) + 10
+    const randX = (Math.random() * 50) + 10
+    const randY = (Math.random() * 50) + 10
 
     dom.style.top = `${randY}%`
     dom.style.left = `${randX}%`
